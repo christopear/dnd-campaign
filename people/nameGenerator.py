@@ -6,109 +6,109 @@ def generate_name(race, gender, count=1):
 
     for i in range(0, count):
         if race == Race.Beholders:
-            from people.names.dndBeholders import nameGen
+            from people.races.dndBeholders import nameGen
             retter.append(nameGen(gender))
         if race == Race.Changelings:
-            from people.names.dndChangelings import nameGen
+            from people.races.dndChangelings import nameGen
             retter.append(nameGen(gender))
         if race == Race.DeepGnome:
-            from people.names.dndDeepGnome import nameGen
+            from people.races.dndDeepGnome import nameGen
             retter.append(nameGen(gender))
         if race == Race.Deva:
-            from people.names.dndDevaNames import nameGen
+            from people.races.dndDevaNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Dragonborn:
-            from people.names.dndDragonbornNames import nameGen
+            from people.races.dndDragonbornNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Drow:
-            from people.names.dndDrowNames import nameGen
+            from people.races.dndDrowNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Dwarf:
-            from people.names.dndDwarfNames import nameGen
+            from people.races.dndDwarfNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Eladrin:
-            from people.names.dndEladrinNames import nameGen
+            from people.races.dndEladrinNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Elf:
-            from people.names.dndElfNames import nameGen
+            from people.races.dndElfNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Genasi:
-            from people.names.dndGenasi import nameGen
+            from people.races.dndGenasi import nameGen
             retter.append(nameGen(gender))
         if race == Race.Githzerai:
-            from people.names.dndGithzeraiNames import nameGen
+            from people.races.dndGithzeraiNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Gnoll:
-            from people.names.dndGnollNames import nameGen
+            from people.races.dndGnollNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Gnome:
-            from people.names.dndGnomeNames import nameGen
+            from people.races.dndGnomeNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Goliath:
-            from people.names.dndGoliathNames import nameGen
+            from people.races.dndGoliathNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Hag:
-            from people.names.dndHagNames import nameGen
+            from people.races.dndHagNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Halfelf:
-            from people.names.dndHalfelfNames import nameGen
+            from people.races.dndHalfelfNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Halfling:
-            from people.names.dndHalflingNames import nameGen
+            from people.races.dndHalflingNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Human:
-            from people.names.dndHumanNames import nameGen
+            from people.races.dndHumanNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Kenku:
-            from people.names.dndKenkuNames import nameGen
+            from people.races.dndKenkuNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Kobolds:
-            from people.names.dndKobolds import nameGen
+            from people.races.dndKobolds import nameGen
             retter.append(nameGen(gender))
         if race == Race.Lizardfolk:
-            from people.names.dndLizardfolkNames import nameGen
+            from people.races.dndLizardfolkNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.MindFlayers:
-            from people.names.dndMindFlayers import nameGen
+            from people.races.dndMindFlayers import nameGen
             retter.append(nameGen(gender))
         if race == Race.Minotaur:
-            from people.names.dndMinotaurNames import nameGen
+            from people.races.dndMinotaurNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Orc:
-            from people.names.dndOrcNames import nameGen
+            from people.races.dndOrcNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Orcs:
-            from people.names.dndOrcs import nameGen
+            from people.races.dndOrcs import nameGen
             retter.append(nameGen(gender))
         if race == Race.Shardmind:
-            from people.names.dndShardmindNames import nameGen
+            from people.races.dndShardmindNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Shifter:
-            from people.names.dndShifterNames import nameGen
+            from people.races.dndShifterNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Tabaxi:
-            from people.names.dndTabaxiNames import nameGen
+            from people.races.dndTabaxiNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Tiefling:
-            from people.names.dndTieflingNames import nameGen
+            from people.races.dndTieflingNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.Triton:
-            from people.names.dndTriton import nameGen
+            from people.races.dndTriton import nameGen
             retter.append(nameGen(gender))
         if race == Race.Warforged:
-            from people.names.dndWarforged import nameGen
+            from people.races.dndWarforged import nameGen
             retter.append(nameGen(gender))
         if race == Race.Wilden:
-            from people.names.dndWildenNames import nameGen
+            from people.races.dndWildenNames import nameGen
             retter.append(nameGen(gender))
         if race == Race.YuanTi:
-            from people.names.dndYuanTi import nameGen
+            from people.races.dndYuanTi import nameGen
             retter.append(nameGen(gender))
         if race == Race.Aarakocra:
-            from people.names.dndAarakocra import nameGen
+            from people.races.dndAarakocra import nameGen
             retter.append(nameGen(gender))
         if race == Race.Aasimar:
-            from people.names.dndAasimar import nameGen
+            from people.races.dndAasimar import nameGen
             retter.append(nameGen(gender))
 
     return retter

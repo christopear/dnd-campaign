@@ -31,6 +31,6 @@ swear = ["anal", "anilingus", "anus", "apeshit", "arse", "arsehole", "ass", "ass
 
 def testSwear(nm):
     if nm in swear:
-        return nm
-    else:
         return ""
+    else:
+        return nm

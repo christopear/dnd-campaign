@@ -1,6 +1,6 @@
 import numpy as np
 
-from people.person import Person
+from people.Person import Person
 
 
 class Community:
