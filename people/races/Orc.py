@@ -33,7 +33,7 @@ class Orc(Person):
         name_component2 = choice(Orc.nm5)
         name_component3 = choice(Orc.nm6)
         nMs = name_component + name_component2 + name_component3
-        testSwear(nMs)
+        return testSwear(nMs)
 
 
     def nameMas(self):
@@ -41,4 +41,4 @@ class Orc(Person):
         name_component2 = choice(Orc.nm2)
         name_component3 = choice(Orc.nm3)
         nMs = name_component + name_component2 + name_component3
-        testSwear(nMs)
+        return testSwear(nMs)

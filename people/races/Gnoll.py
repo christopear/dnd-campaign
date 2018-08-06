@@ -49,4 +49,4 @@ class Gnoll(Person):
             name_component4 = choice(Gnoll.nm4)
 
         nMs = name_component + name_component2 + name_component3 + name_component4
-        testSwear(nMs)
+        return testSwear(nMs)

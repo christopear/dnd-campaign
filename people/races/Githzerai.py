@@ -22,11 +22,11 @@ class Githzerai(Person):
 		name_component = choice(Githzerai.nm3)
 		name_component2 = choice(Githzerai.nm4)
 		nMs = name_component + name_component2
-		testSwear(nMs)
+		return testSwear(nMs)
 
 
 	def nameMas(self):
 		name_component = choice(Githzerai.nm1)
 		name_component2 = choice(Githzerai.nm2)
 		nMs = name_component + name_component2
-		testSwear(nMs)
+		return testSwear(nMs)

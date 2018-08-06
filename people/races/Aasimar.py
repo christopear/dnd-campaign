@@ -45,7 +45,7 @@ class Aasimar(Person):
 
             nMs = name_component + name_component2 + name_component3 + name_component4 + name_component6 + name_component7 + name_component5
 
-        testSwear(nMs)
+        return testSwear(nMs)
 
 
     def nameMas(self):
@@ -67,4 +67,4 @@ class Aasimar(Person):
 
             nMs = name_component + name_component2 + name_component3 + name_component4 + name_component6 + name_component7 + name_component5
 
-            return testSwear(nMs)
+		return testSwear(nMs)

@@ -32,11 +32,11 @@ class Dwarf(Person):
         name_component = choice(Dwarf.nm3)
         name_component2 = choice(Dwarf.nm4)
         nMs = name_component + name_component2
-        testSwear(nMs)
+        return testSwear(nMs)
 
 
     def nameMas(self):
         name_component = choice(Dwarf.nm1)
         name_component2 = choice(Dwarf.nm2)
         nMs = name_component + name_component2
-        testSwear(nMs)
+        return testSwear(nMs)

@@ -44,7 +44,7 @@ class Triton(Person):
 
             nFm = name_component + name_component2 + name_component3 + name_component5 + name_component6 + name_component4 + "n"
 
-        testSwear(nFm)
+        return testSwear(nFm)
 
     def nameMas(self):
         name_component = choice(Triton.nm1)
@@ -55,4 +55,4 @@ class Triton(Person):
 
         name_component4 = choice(Triton.nm2)
         nMs = name_component + name_component2 + name_component3 + name_component2 + "s"
-        testSwear(nMs)
+        return testSwear(nMs)
