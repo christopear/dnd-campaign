@@ -35,19 +35,19 @@ class Wilden(Person):
             "orren"]
 
     def nameFem(self):
-        name_component = choice(Wilden.nmFF)
-        name_component2 = choice(Wilden.nmFL)
+        name_component = choice(self.nmFF)
+        name_component2 = choice(self.nmFL)
         nMs = name_component + name_component2
         return testSwear(nMs)
 
     def nameMas(self):
         if i < 5:
-            name_component = choice(Wilden.nmMFf)
-            name_component2 = choice(Wilden.nmMFl)
+            name_component = choice(self.nmMFf)
+            name_component2 = choice(self.nmMFl)
             nMs = name_component + name_component2
         else:
-            name_component = choice(Wilden.nmMSf)
-            name_component2 = choice(Wilden.nmMSl)
+            name_component = choice(self.nmMSf)
+            name_component2 = choice(self.nmMSl)
             nMs = name_component + name_component2
 
         return testSwear(nMs)

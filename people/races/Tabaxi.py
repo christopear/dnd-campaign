@@ -134,22 +134,22 @@ class Tabaxi(Person):
 
     def nameMas(self):
         if i < 3:
-            name_component = choice(Tabaxi.nm4)
-            name_component2 = choice(Tabaxi.nm5)
+               name_component = choice(self.nm4)
+               name_component2 = choice(self.nm5)
             return testSwear("The " + name_component + " " + name_component2 + " Clan")
 
         elif i < 5:
-            name_component = choice(Tabaxi.nm1)
+        name_component = choice(self.nm1)
             return testSwear(name_component)
         elif i < 7:
-            name_component = choice(Tabaxi.nm2)
-            name_component2 = choice(Tabaxi.nm3)
+    name_component = choice(self.nm2)
+    name_component2 = choice(self.nm3)
 
             names = name_component + " " + name_component2 + " (" + name_component + ")"
             return testSwear(names)
         else:
-            name_component = choice(Tabaxi.nm2)
-            name_component2 = choice(Tabaxi.nm3)
+name_component = choice(self.nm2)
+name_component2 = choice(self.nm3)
 
             names = name_component + " " + name_component2 + " (" + name_component2 + ")"
             return testSwear(names)

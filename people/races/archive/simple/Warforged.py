@@ -38,4 +38,4 @@ class Warforged(Person):
 
 
     def nameMas(self):
-        return testSwear(choice(Warforged.nm1))
+           return testSwear(choice(self.nm1))

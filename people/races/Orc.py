@@ -29,16 +29,16 @@ class Orc(Person):
 
 
     def nameFem(self):
-        name_component = choice(Orc.nm4)
-        name_component2 = choice(Orc.nm5)
-        name_component3 = choice(Orc.nm6)
+        name_component = choice(self.nm4)
+        name_component2 = choice(self.nm5)
+        name_component3 = choice(self.nm6)
         nMs = name_component + name_component2 + name_component3
         return testSwear(nMs)
 
 
     def nameMas(self):
-        name_component = choice(Orc.nm1)
-        name_component2 = choice(Orc.nm2)
-        name_component3 = choice(Orc.nm3)
+        name_component = choice(self.nm1)
+        name_component2 = choice(self.nm2)
+        name_component3 = choice(self.nm3)
         nMs = name_component + name_component2 + name_component3
         return testSwear(nMs)

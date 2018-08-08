@@ -31,21 +31,25 @@ class Deva(Person):
     nm11 = ["", "", "", "", "", "", "h", "h", "hl", "k", "l", "l", "n", "n", "m", "m"]
 
     def nameFem(self):
-        name_component = choice(Deva.nm6)
-        name_component2 = choice(Deva.nm7)
-        name_component3 = choice(Deva.nm8)
-        name_component4 = choice(Deva.nm9)
-        name_component5 = choice(Deva.nm11)
-        while name_component3 == name_component or name_component3 == name_component5:
-            name_component3 = choice(Deva.nm8)
+        i = choice(range(0, 2))
 
-        if i < 6:
+        name_component = choice(self.nm6)
+        name_component2 = choice(self.nm7)
+        name_component3 = choice(self.nm8)
+        name_component4 = choice(self.nm9)
+        name_component5 = choice(self.nm11)
+
+        while name_component3 == name_component or name_component3 == name_component5:
+            name_component3 = choice(self.nm8)
+
+        if i == 0:
             nMs = name_component + name_component2 + name_component3 + name_component4 + name_component5
         else:
-            name_component6 = choice(Deva.nm10)
-            name_component7 = choice(Deva.nm9)
+            name_component6 = choice(self.nm10)
+            name_component7 = choice(self.nm9)
+
             while name_component6 == name_component5 or name_component6 == name_component3:
-                name_component6 = choice(Deva.nm10)
+                name_component6 = choice(self.nm10)
 
             nMs = name_component + name_component2 + name_component3 + name_component4 + name_component6 + name_component7 + name_component5
 
@@ -53,13 +57,13 @@ class Deva(Person):
 
 
     def nameMas(self):
-        name_component = choice(Deva.nm1)
-        name_component2 = choice(Deva.nm2)
-        name_component3 = choice(Deva.nm3)
-        name_component4 = choice(Deva.nm4)
-        name_component5 = choice(Deva.nm5)
+        name_component = choice(self.nm1)
+        name_component2 = choice(self.nm2)
+        name_component3 = choice(self.nm3)
+        name_component4 = choice(self.nm4)
+        name_component5 = choice(self.nm5)
         while name_component3 == name_component or name_component3 == name_component5:
-            name_component3 = choice(Deva.nm3)
+            name_component3 = choice(self.nm3)
 
         nMs = name_component + name_component2 + name_component3 + name_component4 + name_component5
         return testSwear(nMs)

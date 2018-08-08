@@ -20,28 +20,28 @@ class Lizardfolk(Person):
            "sj", "sk", "t", "th", "v", "x"]
 
     def nameMas(self):
-        name_component = choice(Lizardfolk.nm1)
-        name_component2 = choice(Lizardfolk.nm2)
-        name_component3 = choice(Lizardfolk.nm6)
+        name_component = choice(self.nm1)
+        name_component2 = choice(self.nm2)
+        name_component3 = choice(self.nm6)
         if i < 2:
             if name_component < 5:
                 while name_component3 == name_component:
-                    name_component3 = choice(Lizardfolk.nm6)
+                    name_component3 = choice(self.nm6)
 
             nMs = name_component + name_component2 + name_component3
         else:
-            name_component4 = choice(Lizardfolk.nm3)
-            name_component5 = choice(Lizardfolk.nm4)
+            name_component4 = choice(self.nm3)
+            name_component5 = choice(self.nm4)
             while name_component4 == name_component or name_component4 == name_component3:
-                name_component4 = choice(Lizardfolk.nm3)
+                name_component4 = choice(self.nm3)
 
             if i < 7:
                 nMs = name_component + name_component2 + name_component4 + name_component5 + name_component3
             else:
-                name_component6 = choice(Lizardfolk.nm2)
-                name_component7 = choice(Lizardfolk.nm5)
+                name_component6 = choice(self.nm2)
+                name_component7 = choice(self.nm5)
                 while name_component7 == name_component4 or name_component7 == name_component3:
-                    name_component7 = choice(Lizardfolk.nm5)
+                    name_component7 = choice(self.nm5)
 
                 nMs = name_component + name_component2 + name_component4 + name_component6 + name_component7 + name_component5 + name_component3
 

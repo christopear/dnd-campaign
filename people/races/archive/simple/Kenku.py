@@ -67,4 +67,4 @@ class Kenku(Person):
 
 
     def nameMas(self):
-        return testSwear(choice(Kenku.nm1))
+           return testSwear(choice(self.nm1))

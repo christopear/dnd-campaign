@@ -16,7 +16,7 @@ class Shardmind(Person):
 
 
     def nameMas(self):
-        name_component = choice(Shardmind.nm1)
-        name_component2 = choice(Shardmind.nm2)
+        name_component = choice(self.nm1)
+        name_component2 = choice(self.nm2)
         nMs = name_component + name_component2
         return testSwear(nMs)

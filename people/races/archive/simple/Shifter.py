@@ -31,4 +31,4 @@ class Shifter(Person):
 
 
     def nameMas(self):
-        return testSwear(choice(Shifter.names1))
+        return testSwear(choice(self.names1))

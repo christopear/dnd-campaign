@@ -172,49 +172,52 @@ class Drow(Person):
 			 "ykur", "yl", "ylan", "ym", "yn", "yr", "yrr", "yth"]
 
 	def nameSur(self):
-		if i < 4:
-			name_component3 = choice(Drow.nmSRf)
-			name_component4 = choice(Drow.nmSRl)
+		i = choice(range(0, 3))
+		if i == 0:
+			name_component3 = choice(self.nmSRf)
+			name_component4 = choice(self.nmSRl)
 			nSr = name_component3 + name_component4
 			return testSwear(nSr)
 
-		elif i < 8:
-			name_component3 = choice(Drow.nmSFf)
-			name_component4 = choice(Drow.nmSFl)
-			nSr = nSr = name_component3 + name_component4
+		elif i == 1:
+			name_component3 = choice(self.nmSFf)
+			name_component4 = choice(self.nmSFl)
+			nSr = name_component3 + name_component4
 			return testSwear(nSr)
 		else:
-			name_component3 = choice(Drow.nmS)
+			name_component3 = choice(self.nmS)
 			return testSwear(name_component3)
 
 	def nameFem(self):
-		if i < 4:
-			name_component3 = choice(Drow.nmFRf)
-			name_component4 = choice(Drow.nmFRl)
+		i = choice(range(0, 3))
+		if i == 0:
+			name_component3 = choice(self.nmFRf)
+			name_component4 = choice(self.nmFRl)
 			nSr = name_component3 + name_component4
 			return testSwear(nSr)
 
-		elif i < 8:
-			name_component3 = choice(Drow.nmFFf)
-			name_component4 = choice(Drow.nmFFl)
-			nSr = nSr = name_component3 + name_component4
+		elif i == 1:
+			name_component3 = choice(self.nmFFf)
+			name_component4 = choice(self.nmFFl)
+			nSr = name_component3 + name_component4
 			return testSwear(nSr)
 		else:
-			name_component3 = choice(Drow.nmF)
+			name_component3 = choice(self.nmF)
 			return testSwear(name_component3)
 
 	def nameMas(self):
-		if i < 4:
-			name_component3 = choice(Drow.nmMRf)
-			name_component4 = choice(Drow.nmMRl)
+		i = choice(range(0, 3))
+		if i == 0:
+			name_component3 = choice(self.nmMRf)
+			name_component4 = choice(self.nmMRl)
 			nSr = name_component3 + name_component4
 			return testSwear(nSr)
 
-		elif i < 8:
-			name_component3 = choice(Drow.nmMFf)
-			name_component4 = choice(Drow.nmMFl)
-			nSr = nSr = name_component3 + name_component4
+		elif i == 1:
+			name_component3 = choice(self.nmMFf)
+			name_component4 = choice(self.nmMFl)
+			nSr = name_component3 + name_component4
 			return testSwear(nSr)
 		else:
-			name_component3 = choice(Drow.nmM)
+			name_component3 = choice(self.nmM)
 			return testSwear(name_component3)

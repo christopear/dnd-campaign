@@ -47,31 +47,30 @@ class DeepGnome(Person):
 
 
     def nameSur(self):
-        name_component = choice(DeepGnome.nm13)
-        name_component2 = choice(DeepGnome.nm14)
+        name_component = choice(self.nm13)
+        name_component2 = choice(self.nm14)
         nMs = name_component + name_component2
         return testSwear(nMs.title())
 
     def nameFem(self):
-        name_component = choice(DeepGnome.nm6)
-        name_component2 = choice(DeepGnome.nm7)
-        name_component3 = choice(DeepGnome.nm8)
-        name_component4 = choice(DeepGnome.nm9)
-        if i < 5:
-            name_component5 = choice(DeepGnome.nm12)
-            if name_component < 5 and name_component5 < 7:
-                while name_component5 < 7:
-                    name_component5 = choice(DeepGnome.nm12)
+        i = choice(range(0, 2))
+        name_component = choice(self.nm6)
+        name_component2 = choice(self.nm7)
+        name_component3 = choice(self.nm8)
+        name_component4 = choice(self.nm9)
+        if i == 0:
+            name_component5 = choice(self.nm12)
 
             while name_component3 == name_component or name_component3 == name_component5:
-                name_component3 = choice(DeepGnome.nm8)
+                name_component3 = choice(self.nm8)
 
             nMs = name_component + name_component2 + name_component3 + name_component4 + name_component5
         else:
-            name_component5 = choice(DeepGnome.nm10)
-            name_component6 = choice(DeepGnome.nm11)
+            name_component5 = choice(self.nm10)
+            name_component6 = choice(self.nm11)
+
             while name_component5 == name_component3 or name_component3 == name_component:
-                name_component3 = choice(DeepGnome.nm8)
+                name_component3 = choice(self.nm8)
 
             nMs = name_component + name_component2 + name_component3 + name_component4 + name_component5 + name_component6
 
@@ -79,13 +78,13 @@ class DeepGnome(Person):
 
 
     def nameMas(self):
-        name_component = choice(DeepGnome.nm1)
-        name_component2 = choice(DeepGnome.nm2)
-        name_component3 = choice(DeepGnome.nm3)
-        name_component4 = choice(DeepGnome.nm4)
-        name_component5 = choice(DeepGnome.nm5)
+        name_component = choice(self.nm1)
+        name_component2 = choice(self.nm2)
+        name_component3 = choice(self.nm3)
+        name_component4 = choice(self.nm4)
+        name_component5 = choice(self.nm5)
         while name_component3 == name_component or name_component3 == name_component5:
-            name_component3 = choice(DeepGnome.nm3)
+            name_component3 = choice(self.nm3)
 
         nMs = name_component + name_component2 + name_component3 + name_component4 + name_component5
         return testSwear(nMs)

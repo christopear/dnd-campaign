@@ -51,4 +51,4 @@ class Genasi(Person):
 		   "Vent", "Waft", "Wheeze", "Whiff", "Whirl", "Whirlwind", "Whisk", "Whistle", "Wind", "Wing", "Zephyr"]
 
 	def nameMas(self):
-		return choice(Genasi.nm1)
+		return choice(self.nm1)

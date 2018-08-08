@@ -48,20 +48,20 @@ class Tiefling(Person):
 
     def nameFem(self):
         if i < 7:
-            name_component = choice(Tiefling.nm4)
-            name_component2 = choice(Tiefling.nm5)
+            name_component = choice(self.nm4)
+            name_component2 = choice(self.nm5)
             nMs = name_component + name_component2
         else:
-            name_component = choice(Tiefling.nm3)
+            name_component = choice(self.nm3)
             nMs = name_component
         return testSwear(nMs)
 
     def nameMas(self):
         if i < 7:
-            name_component = choice(Tiefling.nm1)
-            name_component2 = choice(Tiefling.nm2)
+            name_component = choice(self.nm1)
+            name_component2 = choice(self.nm2)
             nMs = name_component + name_component2
         else:
-            name_component = choice(Tiefling.nm3)
+            name_component = choice(self.nm3)
             nMs = name_component
         return testSwear(nMs)

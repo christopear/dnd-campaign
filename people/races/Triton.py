@@ -27,32 +27,32 @@ class Triton(Person):
     nm13 = ["d", "g", "l", "ll", "ln", "lm", "lv", "m", "mn", "n", "ns", "nz", "r", "rs", "s", "sn", "x", "z"]
 
     def nameFem(self):
-        name_component = choice(Triton.nm4)
-        name_component2 = choice(Triton.nm5)
-        name_component3 = choice(Triton.nm6)
-        name_component4 = choice(Triton.nm8)
+        name_component = choice(self.nm4)
+        name_component2 = choice(self.nm5)
+        name_component3 = choice(self.nm6)
+        name_component4 = choice(self.nm8)
         while name_component3 == name_component:
-            name_component3 = choice(Triton.nm6)
+            name_component3 = choice(self.nm6)
 
         if i < 5:
             nFm = name_component + name_component2 + name_component3 + name_component4 + "n"
         else:
-            name_component5 = choice(Triton.nm5)
-            name_component6 = choice(Triton.nm7)
+            name_component5 = choice(self.nm5)
+            name_component6 = choice(self.nm7)
             while name_component6 == name_component3:
-                name_component6 = choice(Triton.nm7)
+                name_component6 = choice(self.nm7)
 
             nFm = name_component + name_component2 + name_component3 + name_component5 + name_component6 + name_component4 + "n"
 
         return testSwear(nFm)
 
     def nameMas(self):
-        name_component = choice(Triton.nm1)
-        name_component2 = choice(Triton.nm2)
-        name_component3 = choice(Triton.nm3)
+        name_component = choice(self.nm1)
+        name_component2 = choice(self.nm2)
+        name_component3 = choice(self.nm3)
         while name_component == name_component3:
-            name_component3 = choice(Triton.nm3)
+            name_component3 = choice(self.nm3)
 
-        name_component4 = choice(Triton.nm2)
+        name_component4 = choice(self.nm2)
         nMs = name_component + name_component2 + name_component3 + name_component2 + "s"
         return testSwear(nMs)

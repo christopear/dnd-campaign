@@ -31,25 +31,25 @@ class Minotaur(Person):
 			"vigor", "walker", "warrior"]
 
 	def nameSur(self):
-		name_component = choice(Minotaur.nmSF)
-		name_component2 = choice(Minotaur.nmSL)
+		name_component = choice(self.nmSF)
+		name_component2 = choice(self.nmSL)
 		return testSwear(name_component + name_component2)
 
 	def nameFem(self):
-		name_component = choice(Minotaur.nmFF)
-		name_component2 = choice(Minotaur.nmFL)
+		name_component = choice(self.nmFF)
+		name_component2 = choice(self.nmFL)
 		nMs = name_component + name_component2
 
 		return testSwear(nMs)
 
 	def nameMas(self):
 		if i < 5:
-			name_component = choice(Minotaur.nmFF)
-			name_component2 = choice(Minotaur.nmFL)
+			name_component = choice(self.nmFF)
+			name_component2 = choice(self.nmFL)
 			nMs = name_component + name_component2
 		else:
-			name_component = choice(Minotaur.nmMF)
-			name_component2 = choice(Minotaur.nmML)
+			name_component = choice(self.nmMF)
+			name_component2 = choice(self.nmML)
 			nMs = name_component + name_component2
 
 		return testSwear(nMs)
