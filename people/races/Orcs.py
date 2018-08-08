@@ -49,7 +49,8 @@ class Orcs(Person):
             "Trampler", "Trasher", "Vanquisher", "Wrecker"]
 
     def nameSur(self):
-        if i < 5:
+        i = choice(range(0, 2))
+        if i == 0:
             nSr = "The " + choice(self.nm9)
         else:
             nSr = choice(self.nm10) + " " + choice(self.nm11)
@@ -57,20 +58,19 @@ class Orcs(Person):
         return testSwear(nSr)
 
     def nameFem(self):
+        i = choice(range(0, 2))
         name_component = choice(self.nm5)
         name_component2 = choice(self.nm6)
         name_component3 = choice(self.nm8)
-        if i < 4:
-            while name_component < 4:
-                name_component = choice(self.nm5)
-
-            while name_component3 < 5 or name_component3 == name_component:
+        if i == 0:
+            while name_component3 == name_component:
                 name_component3 = choice(self.nm8)
 
             nFm = name_component + name_component2 + name_component3
         else:
             name_component4 = choice(self.nm7)
             name_component5 = choice(self.nm6)
+
             while name_component4 == name_component3:
                 name_component4 = choice(self.nm7)
 
@@ -79,11 +79,12 @@ class Orcs(Person):
         return testSwear(nFm)
 
     def nameMas(self):
+        i = choice(range(0, 2))
         name_component = choice(self.nm1)
         name_component2 = choice(self.nm2)
         name_component3 = choice(self.nm4)
-        if i < 4:
-            while name_component < 3 or name_component == name_component3:
+        if i == 0:
+            while name_component == name_component3:
                 name_component = choice(self.nm1)
 
             nMs = name_component + name_component2 + name_component3

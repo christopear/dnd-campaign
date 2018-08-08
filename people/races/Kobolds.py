@@ -15,23 +15,18 @@ class Kobolds(Person):
 
 
     def nameMas(self):
+        i = choice(range(0, 2))
         name_component = choice(self.nm1)
         name_component2 = choice(self.nm2)
         name_component4 = choice(self.nm4)
-        if i < 4:
-            while name_component < 4:
-                name_component = choice(self.nm1)
-
-            while name_component4 < 5 or name_component4 == name_component:
+        if i == 0:
+            while name_component4 == name_component:
                 name_component4 = choice(self.nm4)
 
             nMs = name_component + name_component2 + name_component4
         else:
             name_component3 = choice(self.nm3)
             name_component5 = choice(self.nm2)
-            if name_component < 4:
-                while name_component4 < 5:
-                    name_component4 = choice(self.nm4)
 
             while name_component3 == name_component or name_component3 == name_component4:
                 name_component3 = choice(self.nm3)

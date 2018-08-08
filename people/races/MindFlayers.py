@@ -20,10 +20,11 @@ class MindFlayers(Person):
     nm7 = ["k", "kt", "ks", "l", "ll", "lt", "m", "n", "r", "sk", "ss", "ssk", "x"]
 
     def nameMas(self):
+        i = choice(range(0, 4))
         name_component = choice(self.nm1)
         name_component2 = choice(self.nm2)
         name_component3 = choice(self.nm7)
-        if i < 2:
+        if i == 0:
             while name_component < 3 or name_component == name_component3:
                 name_component = choice(self.nm1)
 
@@ -34,7 +35,7 @@ class MindFlayers(Person):
             while name_component4 == name_component or name_component4 == name_component3:
                 name_component4 = choice(self.nm3)
 
-            if i < 6:
+            if i == 1:
                 nMs = name_component + name_component2 + name_component4 + name_component5 + name_component3
             else:
                 name_component6 = choice(self.nm5)
@@ -42,7 +43,7 @@ class MindFlayers(Person):
                 while name_component6 == name_component4 or name_component6 == name_component3:
                     name_component6 = choice(self.nm5)
 
-                if i < 9:
+                if i == 2:
                     nMs = name_component + name_component2 + name_component4 + name_component5 + name_component6 + name_component7 + name_component3
                 else:
                     name_component8 = choice(self.nm5)

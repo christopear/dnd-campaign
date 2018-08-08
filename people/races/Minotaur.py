@@ -43,7 +43,8 @@ class Minotaur(Person):
 		return testSwear(nMs)
 
 	def nameMas(self):
-		if i < 5:
+		i = choice(range(0, 2))
+		if i == 0:
 			name_component = choice(self.nmFF)
 			name_component2 = choice(self.nmFL)
 			nMs = name_component + name_component2
