@@ -4,7 +4,7 @@ from people.Person import Person
 from tools.swearCheck import testSwear
 
 
-class Beholders(Person):
+class Beholder(Person):
 	nm1 = ["", "", "", "", "", "b", "c", "ch", "d", "dh", "f", "g", "gh", "j", "kh", "l", "m", "n", "q", "qh", "r", "s",
 		   "th", "v", "x", "z"]
 	nm2 = ["a", "e", "i", "o", "a", "e", "i", "o", "a", "e", "i", "o", "a", "e", "i", "o", "a", "e", "i", "o", "a", "e",

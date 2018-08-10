@@ -4,7 +4,7 @@ from people.Person import Person
 from tools.swearCheck import testSwear
 
 
-class MindFlayers(Person):
+class MindFlayer(Person):
     nm1 = ["", "", "", "c", "d", "dr", "g", "gr", "k", "l", "q", "qh", "r", "s", "sr", "sv", "sl", "t", "th", "tr", "v",
            "z"]
     nm2 = ["a", "e", "u", "a", "e", "u", "a", "e", "u", "a", "e", "u", "a", "e", "u", "a", "e", "u", "a", "e", "u", "a",

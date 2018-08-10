@@ -1,4 +1,7 @@
+from random import choice
+
 from constructs.gender import Gender
+from tools.swearCheck import testSwear
 
 
 class Person:
@@ -40,3 +43,22 @@ class Person:
 	def nameMas(self):
 		raise NotImplementedError("Masculine name generation not defined.")
 		return None
+
+
+class SimplePerson(Person):
+	def nameMas(self):
+		return testSwear(choice(self.nm1))
+
+
+class StandardPerson(Person):
+	def nameFem(self):
+		name_component = choice(self.nm3)
+		name_component2 = choice(self.nm4)
+		nMs = name_component + name_component2
+		return testSwear(nMs)
+
+	def nameMas(self):
+		name_component = choice(self.nm1)
+		name_component2 = choice(self.nm2)
+		nMs = name_component + name_component2
+		return testSwear(nMs)
