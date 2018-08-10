@@ -24,10 +24,18 @@ class Person:
 			if first_name != "":
 				return first_name
 
-	def __init__(self, first_name, last_name, gender):
+	def __init__(self
+				 , first_name=None
+				 , last_name=None
+				 , gender=None
+				 , father=None
+				 , mother=None
+				 ):
 
-		self.race = self.__class__.__name__
+		# self.race = self.__class__.__name__
 
+		self.mother = mother
+		self.father = father
 		self.gender = gender
 		self.last_name = last_name
 		self.first_name = first_name
