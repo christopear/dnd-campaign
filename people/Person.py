@@ -1,6 +1,7 @@
 from enum import Enum
 from random import choice
 
+from constructs.DeathAge import get_death_age
 from constructs.gender import Gender
 
 
@@ -22,6 +23,7 @@ class Person:
 				 , age=None
 				 ):
 
+		self.death_age = get_death_age()
 		self.age = age
 		self.gender = gender
 		self.mother = mother
@@ -29,6 +31,7 @@ class Person:
 
 		self.generate_gender(gender)
 		self.generate_age(age)
+		self.generate_death_age()
 
 	def generate_gender(self, gender):
 		if gender is None:
