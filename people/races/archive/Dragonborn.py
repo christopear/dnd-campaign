@@ -41,19 +41,19 @@ class Dragonborn(Person):
 	nm9 = ["d", "j", "l", "ll", "m", "n", "nd", "rg", "r", "rr", "rd"]
 	nm10 = ["c", "d", "k", "l", "n", "r", "s", "sh", "th"]
 
-	def nameFem(self):
+	def generate_feminine(self):
 		name_component = choice(self.nm3)
 		name_component2 = choice(self.nm4)
 		nMs = name_component + name_component2
 		return testSwear(nMs)
 
-	def nameMas(self):
+	def generate_masculine(self):
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)
 		nMs = name_component + name_component2
 		return testSwear(nMs)
 
-	def nameSur(self):
+	def generate_surname(self):
 		i = choice(range(0, 3))
 
 		name_component = choice(self.nm5)

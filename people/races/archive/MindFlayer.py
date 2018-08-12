@@ -19,7 +19,7 @@ class MindFlayer(Person):
            "ua", "ao", "uo"]
     nm7 = ["k", "kt", "ks", "l", "ll", "lt", "m", "n", "r", "sk", "ss", "ssk", "x"]
 
-    def nameMas(self):
+	def generate_masculine(self):
         i = choice(range(0, 4))
         name_component = choice(self.nm1)
         name_component2 = choice(self.nm2)

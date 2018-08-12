@@ -19,7 +19,7 @@ class Lizardfolk(Person):
 	nm6 = ["", "", "", "", "", "", "", "ch", "k", "n", "nd", "nk", "nt", "r", "rd", "rk", "rt", "rth", "s", "ss", "sh",
 		   "sj", "sk", "t", "th", "v", "x"]
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 3))
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)

@@ -30,7 +30,7 @@ class Deva(Person):
     nm10 = ["hn", "l", "ll", "m", "n", "r", "y"]
     nm11 = ["", "", "", "", "", "", "h", "h", "hl", "k", "l", "l", "n", "n", "m", "m"]
 
-    def nameFem(self):
+	def generate_feminine(self):
         i = choice(range(0, 2))
 
         name_component = choice(self.nm6)
@@ -55,8 +55,7 @@ class Deva(Person):
 
         return testSwear(nMs)
 
-
-    def nameMas(self):
+	def generate_masculine(self):
         name_component = choice(self.nm1)
         name_component2 = choice(self.nm2)
         name_component3 = choice(self.nm3)

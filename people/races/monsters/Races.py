@@ -1,5 +1,4 @@
 from people.Person import *
-from tools.swearCheck import testSwear
 
 
 class MindFlayer(Person):
@@ -17,7 +16,7 @@ class MindFlayer(Person):
 		   "ua", "ao", "uo"]
 	nm7 = ["k", "kt", "ks", "l", "ll", "lt", "m", "n", "r", "sk", "ss", "ssk", "x"]
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 4))
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)
@@ -51,7 +50,7 @@ class MindFlayer(Person):
 
 					nMs = name_component + name_component2 + name_component4 + name_component5 + name_component6 + name_component7 + name_component8 + name_component9
 
-		return testSwear(nMs)
+		return nMs
 
 
 class Beholder(Person):
@@ -73,7 +72,7 @@ class Beholder(Person):
 		   "lk",
 		   "lks", "ls", "lsh", "lx", "ph", "r", "rq", "rv", "s", "sh", "x"]
 
-	def nameMas(self, i):
+	def generate_masculine(self, i):
 		i = choice(range(0, 4))
 		name_component = choice(self.nm1)
 
@@ -108,7 +107,7 @@ class Beholder(Person):
 
 					nMs = name_component + name_component2 + name_component4 + name_component5 + name_component6 + name_component7 + name_component8 + name_component9
 
-		return testSwear(nMs)
+		return nMs
 
 
 class Gnoll(Person):
@@ -149,10 +148,10 @@ class Gnoll(Person):
 		   "Rovers", "Sadists", "Savagages", "Slayers", "Stalkers", "Trappers", "Vagabonds", "Vagrants", "Vandals",
 		   "Varmints", "Vermin", "Wanderers", "Warlords", "Wildlings"]
 
-	def nameSur(self):
+	def generate_surname(self):
 		return "of the " + choice(self.nm5) + " " + choice(self.nm6)
 
-	def nameMas(self):
+	def generate_masculine(self):
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)
 		name_component3 = choice(self.nm3)
@@ -161,7 +160,7 @@ class Gnoll(Person):
 			name_component4 = choice(self.nm4)
 
 		nMs = name_component + name_component2 + name_component3 + name_component4
-		return testSwear(nMs)
+		return nMs
 
 
 class Hag(Person):
@@ -269,15 +268,15 @@ class Hag(Person):
 		   "toppler", "trampler", "tremble", "trembler", "trick", "trickle", "tumbler", "twitch", "twitcher", "waddle",
 		   "waggle", "whistle", "whistler", "whittle", "wiggle", "wrangle", "wrangler"]
 
-	def nameSur(self):
+	def generate_surname(self):
 		name_component3 = choice(self.nm3)
 		name_component4 = choice(self.nm4)
-		return testSwear(name_component3 + name_component4)
+		return name_component3 + name_component4
 
-	def nameFem(self):
+	def generate_feminine(self):
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)
-		return testSwear(name_component + " " + name_component2)
+		return name_component + " " + name_component2
 
 
 class Kobolds(Person):
@@ -288,7 +287,7 @@ class Kobolds(Person):
 		   "vl", "vn"]
 	nm4 = ["", "", "", "", "", "d", "g", "gs", "k", "ks", "m", "n", "r", "rn", "s", "ss", "tt", "v", "x"]
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 2))
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)
@@ -307,7 +306,7 @@ class Kobolds(Person):
 
 			nMs = name_component + name_component2 + name_component3 + name_component5 + name_component2
 
-		return testSwear(nMs)
+		return nMs
 
 
 class Orcs(Person):
@@ -354,16 +353,16 @@ class Orcs(Person):
 			"Snapper", "Spear", "Splitter", "Squasher", "Squelcher", "Squisher", "Strangler", "Sunderer", "Sword",
 			"Trampler", "Trasher", "Vanquisher", "Wrecker"]
 
-	def nameSur(self):
+	def generate_surname(self):
 		i = choice(range(0, 2))
 		if i == 0:
 			nSr = "The " + choice(self.nm9)
 		else:
 			nSr = choice(self.nm10) + " " + choice(self.nm11)
 
-		return testSwear(nSr)
+		return nSr
 
-	def nameFem(self):
+	def generate_feminine(self):
 		i = choice(range(0, 2))
 		name_component = choice(self.nm5)
 		name_component2 = choice(self.nm6)
@@ -382,9 +381,9 @@ class Orcs(Person):
 
 			nFm = name_component + name_component2 + name_component4 + name_component5 + name_component3
 
-		return testSwear(nFm)
+		return nFm
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 2))
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)
@@ -402,7 +401,7 @@ class Orcs(Person):
 
 			nMs = name_component + name_component2 + name_component4 + name_component5 + name_component3
 
-		return testSwear(nMs)
+		return nMs
 
 
 class YuanTi(Person):
@@ -419,7 +418,7 @@ class YuanTi(Person):
 		   "iu", "ui"]
 	nm6 = ["", "", "", "", "", "", "", "", "h", "h", "l", "ll", "s", "ss", "sh"]
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm1)
@@ -440,4 +439,4 @@ class YuanTi(Person):
 
 			nMs = name_component + name_component2 + name_component3 + name_component7 + name_component6 + name_component4 + name_component5
 
-		return testSwear(nMs)
+		return nMs

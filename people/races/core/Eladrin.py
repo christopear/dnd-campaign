@@ -1,7 +1,6 @@
 from random import choice
 
 from people.Person import Person
-from tools.swearCheck import testSwear
 
 
 class Eladrin(Person):
@@ -23,16 +22,14 @@ class Eladrin(Person):
            "parys", "prana", "qirith", "qis", "raste", "rastra", "riele", "rynna", "sanna", "shana", "sys", "thaea", "tora",
            "trianna", "a", "viryn", "vyre", "wena", "wyse", "xana", "xis", "yana", "yeira", "zane", "zora"]
 
-
-    def nameFem(self):
+    def generate_feminine(self):
         name_component = choice(self.nm3)
         name_component2 = choice(self.nm4)
         nMs = name_component + name_component2
-        return testSwear(nMs)
+        return nMs
 
-
-    def nameMas(self):
+    def generate_masculine(self):
         name_component = choice(self.nm1)
         name_component2 = choice(self.nm2)
         nMs = name_component + name_component2
-        return testSwear(nMs)
+        return nMs

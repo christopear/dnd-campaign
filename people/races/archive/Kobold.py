@@ -12,9 +12,7 @@ class Kobolds(Person):
            "vl", "vn"]
     nm4 = ["", "", "", "", "", "d", "g", "gs", "k", "ks", "m", "n", "r", "rn", "s", "ss", "tt", "v", "x"]
 
-
-
-    def nameMas(self):
+	def generate_masculine(self):
         i = choice(range(0, 2))
         name_component = choice(self.nm1)
         name_component2 = choice(self.nm2)

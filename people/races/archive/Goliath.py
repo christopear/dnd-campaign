@@ -40,20 +40,20 @@ class Goliath(Person):
 			"igano", "igo", "igone", "ileana", "ithino", "olake", "ugate", "ugoni", "ukane", "ukate", "ukena", "ulane",
 			"upine", "utha", "uthea"]
 
-	def nameSur(self):
+	def generate_surname(self):
 		name_component = choice(self.nmMdF)
 		name_component2 = choice(self.nmMdL)
 		name_component3 = choice(self.nmSF)
 		name_component4 = choice(self.nmSL)
 		return testSwear(name_component + name_component2 + " " + name_component3 + name_component4)
 
-	def nameFem(self):
+	def generate_feminine(self):
 		name_component = choice(self.nmFF)
 		name_component2 = choice(self.nmFL)
 		nMs = name_component + name_component2
 		return testSwear(nMs)
 
-	def nameMas(self):
+	def generate_masculine(self):
 		name_component = choice(self.nmMF)
 		name_component2 = choice(self.nmML)
 		nMs = name_component + name_component2

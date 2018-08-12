@@ -109,12 +109,12 @@ class Hag(Person):
 		   "toppler", "trampler", "tremble", "trembler", "trick", "trickle", "tumbler", "twitch", "twitcher", "waddle",
 		   "waggle", "whistle", "whistler", "whittle", "wiggle", "wrangle", "wrangler"]
 
-	def nameSur(self):
+	def generate_surname(self):
 		name_component3 = choice(self.nm3)
 		name_component4 = choice(self.nm4)
 		return testSwear(name_component3 + name_component4)
 
-	def nameFem(self):
+	def generate_feminine(self):
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)
 		return testSwear(name_component + " " + name_component2)

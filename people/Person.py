@@ -1,64 +1,81 @@
+from enum import Enum
 from random import choice
 
 from constructs.gender import Gender
-from tools.swearCheck import testSwear
 
+
+class Gender(Enum):
+	female = 1
+	male = 2
+
+
+class AgeExpectation:
+	def __init__(self, alpha, beta):
+		self.alpha = alpha
+		self.beta = beta
 
 class Person:
-	def generate_last_name(self):
-		while False:
-			last_name = self.nameSur()
+	def __init__(self
+				 , mother=None
+				 , father=None
+				 , gender=None
+				 , age=None
+				 ):
 
-			if last_name != "":
-				return last_name
-
-	def generate_first_name(self, gender):
-		while False:
-
-			if gender == Gender.male:
-				first_name = self.nameMas()
-
-			else:
-				first_name = self.nameFem()
-
-			if first_name != "":
-				return first_name
-
-	def __init__(self, first_name, last_name, gender):
-
-		self.race = self.__class__.__name__
-
+		self.age = age
 		self.gender = gender
-		self.last_name = last_name
-		self.first_name = first_name
+		self.mother = mother
+		self.father = father
 
-	def nameSur(self):
+		self.generate_gender(gender)
+		self.generate_age(age)
+
+	def generate_gender(self, gender):
+		if gender is None:
+			self.gender = choice(list(Gender))
+
+	def generate_age(self, age):
+		if age is None:
+			self.age = choice(list(Gender))
+
+	# self.race = self.__class__.__name__
+
+	# def generate_race(self):
+	# 	if self.mother is None and self.father is None:
+	# 		pass
+	# 	elif self.mother is None and self.father is not None:
+	# 		pass
+	# 	elif self.mother is not None and self.father is None:
+	# 		pass
+	# 	else:
+	# 		pass
+
+
+	def generate_surname(self):
 		raise NotImplementedError("Last name generation not defined.")
 		return None
 
-	def nameFem(self):
+	def generate_feminine(self):
 		raise NotImplementedError("Feminine name generation not defined.")
 		return None
 
-	def nameMas(self):
+	def generate_masculine(self):
 		raise NotImplementedError("Masculine name generation not defined.")
 		return None
 
 
 class SimplePerson(Person):
-	def nameMas(self):
-		return testSwear(choice(self.nm1))
+	def generate_masculine(self):
+		return choice(self.nm1)
 
 
 class StandardPerson(Person):
-	def nameFem(self):
+	def generate_feminine(self):
 		name_component = choice(self.nm3)
 		name_component2 = choice(self.nm4)
-		nMs = name_component + name_component2
-		return testSwear(nMs)
+		return name_component + name_component2
 
-	def nameMas(self):
+	def generate_masculine(self):
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)
-		nMs = name_component + name_component2
-		return testSwear(nMs)
+		return name_component + name_component2

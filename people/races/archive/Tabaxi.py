@@ -132,7 +132,7 @@ class Tabaxi(Person):
 		   "Slopes", "Storm", "Swamp", "Swamps", "Thicket", "Torrent", "Wild", "Wilderness", "Wilds", "Woodland",
 		   "Woodlands", "Woods"]
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 4))
 		if i == 0:
 			name_component = choice(self.nm4)

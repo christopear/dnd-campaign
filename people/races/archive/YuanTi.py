@@ -18,7 +18,7 @@ class YuanTi(Person):
 		   "iu", "ui"]
 	nm6 = ["", "", "", "", "", "", "", "", "h", "h", "l", "ll", "s", "ss", "sh"]
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm1)

@@ -1,7 +1,6 @@
 from random import choice
 
 from people.Person import Person
-from tools.swearCheck import testSwear
 
 
 class Drow(Person):
@@ -171,53 +170,53 @@ class Drow(Person):
 			 "une",
 			 "ykur", "yl", "ylan", "ym", "yn", "yr", "yrr", "yth"]
 
-	def nameSur(self):
+	def generate_surname(self):
 		i = choice(range(0, 3))
 		if i == 0:
 			name_component3 = choice(self.nmSRf)
 			name_component4 = choice(self.nmSRl)
 			nSr = name_component3 + name_component4
-			return testSwear(nSr)
+			return nSr
 
 		elif i == 1:
 			name_component3 = choice(self.nmSFf)
 			name_component4 = choice(self.nmSFl)
 			nSr = name_component3 + name_component4
-			return testSwear(nSr)
+			return nSr
 		else:
 			name_component3 = choice(self.nmS)
-			return testSwear(name_component3)
+			return name_component3
 
-	def nameFem(self):
+	def generate_feminine(self):
 		i = choice(range(0, 3))
 		if i == 0:
 			name_component3 = choice(self.nmFRf)
 			name_component4 = choice(self.nmFRl)
 			nSr = name_component3 + name_component4
-			return testSwear(nSr)
+			return nSr
 
 		elif i == 1:
 			name_component3 = choice(self.nmFFf)
 			name_component4 = choice(self.nmFFl)
 			nSr = name_component3 + name_component4
-			return testSwear(nSr)
+			return nSr
 		else:
 			name_component3 = choice(self.nmF)
-			return testSwear(name_component3)
+			return name_component3
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 3))
 		if i == 0:
 			name_component3 = choice(self.nmMRf)
 			name_component4 = choice(self.nmMRl)
 			nSr = name_component3 + name_component4
-			return testSwear(nSr)
+			return nSr
 
 		elif i == 1:
 			name_component3 = choice(self.nmMFf)
 			name_component4 = choice(self.nmMFl)
 			nSr = name_component3 + name_component4
-			return testSwear(nSr)
+			return nSr
 		else:
 			name_component3 = choice(self.nmM)
-			return testSwear(name_component3)
+			return name_component3

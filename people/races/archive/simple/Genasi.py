@@ -50,5 +50,5 @@ class Genasi(Person):
 		   "Twister",
 		   "Vent", "Waft", "Wheeze", "Whiff", "Whirl", "Whirlwind", "Whisk", "Whistle", "Wind", "Wing", "Zephyr"]
 
-	def nameMas(self):
+	def generate_masculine(self):
 		return choice(self.nm1)

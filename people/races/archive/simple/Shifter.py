@@ -29,6 +29,5 @@ class Shifter(Person):
               "Sun", "Sunrise", "Sunset", "Sunshine", "Swill", "Thistle", "Tidal", "Tiger", "Tinder", "Topaz", "Twig",
               "Twilight", "Urchin", "Vapor", "Violet", "Whirl", "Willow", "Wind", "Wing", "Winter"]
 
-
-    def nameMas(self):
+	def generate_masculine(self):
         return testSwear(choice(self.names1))

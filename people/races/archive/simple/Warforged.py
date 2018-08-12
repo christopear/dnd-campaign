@@ -36,6 +36,5 @@ class Warforged(Person):
            "Voice", "Walker", "Ward", "Warden", "Watcher", "Whisperer", "Wielder", "Winker", "Winner", "Wonderer",
            "Wrestler", "Zealot", "Zero"]
 
-
-    def nameMas(self):
+	def generate_masculine(self):
            return testSwear(choice(self.nm1))

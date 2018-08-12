@@ -13,7 +13,7 @@ class Aarakocra(Person):
 	nm4 = ["a", "e", "i", "a", "e", "i", "a", "e", "i", "a", "e", "i", "a", "e", "i", "aa", "ea", "ee", "ia", "ie"]
 	nm5 = ["", "", "", "", "c", "ck", "d", "f", "g", "hk", "k", "l", "r", "rr", "rc", "rk", "rrk", "s", "ss"]
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm1)

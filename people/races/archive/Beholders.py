@@ -23,7 +23,7 @@ class Beholder(Person):
 		   "lk",
 		   "lks", "ls", "lsh", "lx", "ph", "r", "rq", "rv", "s", "sh", "x"]
 
-	def nameMas(self, i):
+	def generate_masculine(self, i):
 		i = choice(range(0, 4))
 		name_component = choice(self.nm1)
 

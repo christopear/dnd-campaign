@@ -21,15 +21,13 @@ class Gnome(Person):
 		   "qys", "rhana", "roe", "sany", "ssa", "sys", "tina", "tra", "wyn", "wyse", "xi", "xis", "yaris", "yore", "za",
 		   "zyre"]
 
-
-	def nameFem(self):
+	def generate_feminine(self):
 		name_component = choice(self.nm3)
 		name_component2 = choice(self.nm4)
 		nMs = name_component + name_component2
 		return testSwear(nMs)
 
-
-	def nameMas(self):
+	def generate_masculine(self):
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)
 		nMs = name_component + name_component2

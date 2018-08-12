@@ -1,7 +1,6 @@
 from random import choice
 
 from people.Person import Person
-from tools.swearCheck import testSwear
 
 
 class DeepGnome(Person):
@@ -45,14 +44,13 @@ class DeepGnome(Person):
             "sorter", "splitter", "stamper", "stasher", "stocker", "surveyor", "sweeper", "switcher", "teeth", "temperer",
             "tooth", "trader", "twirler", "twister", "vein", "viewer", "warper", "watcher"]
 
-
-    def nameSur(self):
+    def generate_surname(self):
         name_component = choice(self.nm13)
         name_component2 = choice(self.nm14)
         nMs = name_component + name_component2
-        return testSwear(nMs.title())
+        return nMs
 
-    def nameFem(self):
+    def generate_feminine(self):
         i = choice(range(0, 2))
         name_component = choice(self.nm6)
         name_component2 = choice(self.nm7)
@@ -74,10 +72,9 @@ class DeepGnome(Person):
 
             nMs = name_component + name_component2 + name_component3 + name_component4 + name_component5 + name_component6
 
-        return testSwear(nMs)
+        return nMs
 
-
-    def nameMas(self):
+    def generate_masculine(self):
         name_component = choice(self.nm1)
         name_component2 = choice(self.nm2)
         name_component3 = choice(self.nm3)
@@ -87,4 +84,4 @@ class DeepGnome(Person):
             name_component3 = choice(self.nm3)
 
         nMs = name_component + name_component2 + name_component3 + name_component4 + name_component5
-        return testSwear(nMs)
+        return nMs

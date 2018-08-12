@@ -1,5 +1,4 @@
 from people.Person import *
-from tools.swearCheck import testSwear
 
 
 class Changeling(Person):
@@ -8,7 +7,7 @@ class Changeling(Person):
 		   "oo", "ou"]
 	nm3 = ["c", "g", "gs", "k", "ks", "kt", "m", "n", "rx", "rt", "rs", "s", "sk", "t", "ts", "x", "z"]
 
-	def nameMas(self):
+	def generate_masculine(self):
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)
 		name_component3 = choice(self.nm3)
@@ -16,7 +15,7 @@ class Changeling(Person):
 			name_component3 = choice(self.nm3)
 
 		nMs = name_component + name_component2 + name_component3
-		return testSwear(nMs)
+		return nMs
 
 
 class Genasi(SimplePerson):
@@ -177,19 +176,19 @@ class Minotaur(Person):
 			"striker",
 			"vigor", "walker", "warrior"]
 
-	def nameSur(self):
+	def generate_surname(self):
 		name_component = choice(self.nmSF)
 		name_component2 = choice(self.nmSL)
-		return testSwear(name_component + name_component2)
+		return name_component + name_component2
 
-	def nameFem(self):
+	def generate_feminine(self):
 		name_component = choice(self.nmFF)
 		name_component2 = choice(self.nmFL)
 		nMs = name_component + name_component2
 
-		return testSwear(nMs)
+		return nMs
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 2))
 		if i == 0:
 			name_component = choice(self.nmFF)
@@ -200,4 +199,4 @@ class Minotaur(Person):
 			name_component2 = choice(self.nmML)
 			nMs = name_component + name_component2
 
-		return testSwear(nMs)
+		return nMs

@@ -26,17 +26,14 @@ class Orc(Person):
            "mi", "mira", "me", "mur", "ne", "ner", "nir", "nar", "nchu", "ni", "nur", "ral", "rel", "ri", "rook", "ti",
            "tah", "tir", "tar", "tur", "war", "z", "zar", "zara", "zi", "zur", "zura", "zira"]
 
-
-
-    def nameFem(self):
+	def generate_feminine(self):
         name_component = choice(self.nm4)
         name_component2 = choice(self.nm5)
         name_component3 = choice(self.nm6)
         nMs = name_component + name_component2 + name_component3
         return testSwear(nMs)
 
-
-    def nameMas(self):
+	def generate_masculine(self):
         name_component = choice(self.nm1)
         name_component2 = choice(self.nm2)
         name_component3 = choice(self.nm3)

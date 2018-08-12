@@ -29,7 +29,7 @@ class Aasimar(Person):
 	nm12 = ["a", "e", "i", "a", "e", "i", "a", "e", "i", "a", "e", "i", "a", "e", "i", "au", "ou", "oe"]
 	nm13 = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "h", "l", "m", "n", "r"]
 
-	def nameFem(self):
+	def generate_feminine(self):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm7)
@@ -52,7 +52,7 @@ class Aasimar(Person):
 
 		return testSwear(nMs)
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 2))
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)

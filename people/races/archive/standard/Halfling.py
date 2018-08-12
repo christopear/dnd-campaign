@@ -22,15 +22,13 @@ class Halfling(Person):
            "ni", "nys", "ola", "ora", "phina", "prys", "rana", "ree", "ri", "ris", "sica", "sira", "sys", "tina", "trix",
            "ula", "vira", "vyre", "wyn", "wyse", "yola", "yra", "zana", "zira"]
 
-
-    def nameFem(self):
+	def generate_feminine(self):
         name_component = choice(self.nm3)
         name_component2 = choice(self.nm4)
         nMs = name_component + name_component2
         return testSwear(nMs)
 
-
-    def nameMas(self):
+	def generate_masculine(self):
         name_component = choice(self.nm1)
         name_component2 = choice(self.nm2)
         nMs = name_component + name_component2

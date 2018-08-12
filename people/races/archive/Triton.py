@@ -26,7 +26,7 @@ class Triton(Person):
 	nm12 = ["a", "o", "a", "o", "e", "u"]
 	nm13 = ["d", "g", "l", "ll", "ln", "lm", "lv", "m", "mn", "n", "ns", "nz", "r", "rs", "s", "sn", "x", "z"]
 
-	def nameFem(self):
+	def generate_feminine(self):
 		i = choice(range(0, 2))
 		name_component = choice(self.nm4)
 		name_component2 = choice(self.nm5)
@@ -47,7 +47,7 @@ class Triton(Person):
 
 		return testSwear(nFm)
 
-	def nameMas(self):
+	def generate_masculine(self):
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)
 		name_component3 = choice(self.nm3)

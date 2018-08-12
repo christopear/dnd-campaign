@@ -22,7 +22,7 @@ class Calashite(Human):
 	nm11 = ["d", "h", "hr", "hl", "k", "kh", "l", "m", "mm", "n", "nn", "ss", "st", "sh"]
 	nm12 = ["", "", "", "", "", "d", "l", "m", "n", "r"]
 
-	def nameSur(self):
+	def generate_surname(self):
 		name_component = choice(self.nm9)
 		name_component2 = choice(self.nm10)
 		name_component3 = choice(self.nm11)
@@ -31,7 +31,7 @@ class Calashite(Human):
 		lname = name_component + name_component2 + name_component3 + name_component4 + name_component5
 		return testSwear(lname)
 
-	def nameMas(self):
+	def generate_masculine(self):
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)
 		name_component3 = choice(self.nm3)
@@ -40,7 +40,7 @@ class Calashite(Human):
 		nMs = name_component + name_component2 + name_component3 + name_component4 + name_component5
 		return testSwear(nMs)
 
-	def nameFem(self):
+	def generate_feminine(self):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm5)
@@ -130,7 +130,7 @@ class Chondathan(Human):
 			"brooke",
 			"fall", "fallow", "horn", "root", "shine", "swallow", "thorne", "willow", "wood"]
 
-	def nameMas(self, i):
+	def generate_masculine(self, i):
 		name_component = choice(self.nm13)
 		name_component2 = choice(self.nm14)
 		name_component3 = choice(self.nm15)
@@ -143,7 +143,7 @@ class Chondathan(Human):
 		nMs = name_component + name_component2 + name_component3 + name_component4 + name_component5
 		return testSwear(nMs)
 
-	def nameFem(self):
+	def generate_feminine(self):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm17)
@@ -161,7 +161,7 @@ class Chondathan(Human):
 
 		return testSwear(nMs)
 
-	def nameSur(self):
+	def generate_surname(self):
 		# todo make this the default surname for multiple races
 		name_component = choice(self.nm21)
 		name_component2 = choice(self.nm22)
@@ -188,7 +188,7 @@ class Damaran(Human):
 	nm32 = ["d", "dr", "k", "kr", "kn", "l", "m", "n", "r", "rg", "rk", "rn", "rd", "v", "vr", "z"]
 	nm33 = ["dz", "g", "n", "rsk", "sk", "tsk", "v", "z"]
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 1))
 		name_component = choice(self.nm23)
 		name_component2 = choice(self.nm24)
@@ -203,7 +203,7 @@ class Damaran(Human):
 
 		return testSwear(nMs)
 
-	def nameFem(self):
+	def generate_feminine(self):
 		i = choice(range(0, 2))
 		name_component = choice(self.nm27)
 		name_component2 = choice(self.nm24)
@@ -217,7 +217,7 @@ class Damaran(Human):
 
 		return testSwear(nMs)
 
-	def nameSur(self):
+	def generate_surname(self):
 
 		name_component = choice(self.nm21)
 		name_component2 = choice(self.nm22)
@@ -239,7 +239,7 @@ class Illuskan(Human):
 	nm39 = ["fn", "fl", "fr", "g", "l", "lg", "lr", "m", "n", "r", "rh", "sh", "str", "th", "thr", "v", "vr"]
 	nm40 = ["", "", "", "", "y"]
 
-	def nameMas(self, i):
+	def generate_masculine(self, i):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm34)
@@ -254,7 +254,7 @@ class Illuskan(Human):
 
 		return testSwear(nMs)
 
-	def nameFem(self):
+	def generate_feminine(self):
 		# todo bring over the mising nms
 		i = choice(range(0, 2))
 
@@ -272,7 +272,7 @@ class Illuskan(Human):
 
 		return testSwear(nMs)
 
-	def nameSur(self):
+	def generate_surname(self):
 		# todo bring over the other nms
 
 		name_component = choice(self.nm21)
@@ -309,7 +309,7 @@ class Mulan(Human):
 			"nkr", "nz", "pr", "pv", "th", "thr", "v", "vr", "z", "zr", "zd"]
 	nm53 = ["b", "d", "ft", "fk", "hd", "hr", "hk", "k", "kt", "ld", "m", "t"]
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm43)
@@ -326,7 +326,7 @@ class Mulan(Human):
 
 		return testSwear(nMs)
 
-	def nameFem(self):
+	def generate_feminine(self):
 		# todo bring over the names
 		i = choice(range(0, 2))
 
@@ -344,7 +344,7 @@ class Mulan(Human):
 
 		return testSwear(nMs)
 
-	def nameSur(self):
+	def generate_surname(self):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm50)
@@ -382,7 +382,7 @@ class Rashemi(Human):
 			"rk",
 			"th", "tr", "tv", "v", "vr", "vz", "b", "d", "g", "k", "m", "n", "r", "v"]
 
-	def nameMas(self, i):
+	def generate_masculine(self, i):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm54)
@@ -399,7 +399,7 @@ class Rashemi(Human):
 
 		return testSwear(nMs)
 
-	def nameFem(self):
+	def generate_feminine(self):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm58)
@@ -416,7 +416,7 @@ class Rashemi(Human):
 
 		return testSwear(nMs)
 
-	def nameSur(self):
+	def generate_surname(self):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm62)
@@ -447,15 +447,15 @@ class Shou(Human):
 	nm71 = ["a", "i", "u", "ai", "ia", "iao", "ue", "ei", "ie", "ua", "ao"]
 	nm72 = ["", "", "", "m", "n", "ng", "y"]
 
-	def nameMas(self):
+	def generate_masculine(self):
 		# todo implement
 		pass
 
-	def nameFem(self):
+	def generate_feminine(self):
 		# todo implement
 		pass
 
-	def nameSur(self):
+	def generate_surname(self):
 		name_component = choice(self.nm70)
 		name_component2 = choice(self.nm71)
 		name_component3 = choice(self.nm72)
@@ -482,7 +482,7 @@ class Turami(Human):
 			"z"]
 	nm82 = ["", "", "", "", "l", "n", "r", "s"]
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm73)
@@ -499,7 +499,7 @@ class Turami(Human):
 
 		return testSwear(nMs)
 
-	def nameFem(self):
+	def generate_feminine(self):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm77)
@@ -515,7 +515,7 @@ class Turami(Human):
 
 		return testSwear(nMs)
 
-	def nameSur(self):
+	def generate_surname(self):
 		# todo bring over other names
 		name_component = choice(self.nm80)
 		name_component2 = choice(self.nm14)
@@ -1457,14 +1457,14 @@ class EuroFantasy(Human):
 			"Zerelda", "Zerla", "Zerlina", "Zerline", "Zilli", "Zina", "Zoe", "Zoey", "Zoie", "Zorra", "Zuri", "Zuria",
 			"Zurie"]
 
-	def nameMas(self):
+	def generate_masculine(self):
 		# todo implement
 		pass
 
-	def nameFem(self):
+	def generate_feminine(self):
 		# todo implement
 		pass
 
-	def nameSur(self):
+	def generate_surname(self):
 		# todo implement
 		pass

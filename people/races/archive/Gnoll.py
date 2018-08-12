@@ -42,10 +42,10 @@ class Gnoll(Person):
 		   "Rovers", "Sadists", "Savagages", "Slayers", "Stalkers", "Trappers", "Vagabonds", "Vagrants", "Vandals",
 		   "Varmints", "Vermin", "Wanderers", "Warlords", "Wildlings"]
 
-	def nameSur(self):
+	def generate_surname(self):
 		return "of the " + choice(self.nm5) + " " + choice(self.nm6)
 
-	def nameMas(self):
+	def generate_masculine(self):
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)
 		name_component3 = choice(self.nm3)

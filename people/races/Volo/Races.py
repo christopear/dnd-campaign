@@ -1,5 +1,4 @@
 from people.Person import *
-from tools.swearCheck import testSwear
 
 
 class Lizardfolk(Person):
@@ -17,7 +16,7 @@ class Lizardfolk(Person):
 	nm6 = ["", "", "", "", "", "", "", "ch", "k", "n", "nd", "nk", "nt", "r", "rd", "rk", "rt", "rth", "s", "ss", "sh",
 		   "sj", "sk", "t", "th", "v", "x"]
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 3))
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)
@@ -44,7 +43,7 @@ class Lizardfolk(Person):
 
 				nMs = name_component + name_component2 + name_component4 + name_component6 + name_component7 + name_component5 + name_component3
 
-		return testSwear(nMs)
+		return nMs
 
 
 class Kenku(SimplePerson):
@@ -146,7 +145,7 @@ class Triton(Person):
 	nm12 = ["a", "o", "a", "o", "e", "u"]
 	nm13 = ["d", "g", "l", "ll", "ln", "lm", "lv", "m", "mn", "n", "ns", "nz", "r", "rs", "s", "sn", "x", "z"]
 
-	def nameFem(self):
+	def generate_feminine(self):
 		i = choice(range(0, 2))
 		name_component = choice(self.nm4)
 		name_component2 = choice(self.nm5)
@@ -165,9 +164,9 @@ class Triton(Person):
 
 			nFm = name_component + name_component2 + name_component3 + name_component5 + name_component6 + name_component4 + "n"
 
-		return testSwear(nFm)
+		return nFm
 
-	def nameMas(self):
+	def generate_masculine(self):
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)
 		name_component3 = choice(self.nm3)
@@ -176,7 +175,7 @@ class Triton(Person):
 
 		name_component4 = choice(self.nm2)
 		nMs = name_component + name_component2 + name_component3 + name_component4 + "s"
-		return testSwear(nMs)
+		return nMs
 
 
 class Tabaxi(Person):
@@ -307,29 +306,29 @@ class Tabaxi(Person):
 		   "Slopes", "Storm", "Swamp", "Swamps", "Thicket", "Torrent", "Wild", "Wilderness", "Wilds", "Woodland",
 		   "Woodlands", "Woods"]
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 4))
 		if i == 0:
 			name_component = choice(self.nm4)
 			name_component2 = choice(self.nm5)
-			return testSwear("The " + name_component + " " + name_component2 + " Clan")
+			return "The " + name_component + " " + name_component2 + " Clan"
 
 		elif i == 1:
 			name_component = choice(self.nm1)
-			return testSwear(name_component)
+			return name_component
 
 		elif i == 2:
 			name_component = choice(self.nm2)
 			name_component2 = choice(self.nm3)
 
 			names = name_component + " " + name_component2 + " (" + name_component + ")"
-			return testSwear(names)
+			return names
 		else:
 			name_component = choice(self.nm2)
 			name_component2 = choice(self.nm3)
 
 			names = name_component + " " + name_component2 + " (" + name_component2 + ")"
-		return testSwear(names)
+		return names
 
 
 class Goliath(Person):
@@ -368,24 +367,24 @@ class Goliath(Person):
 			"igano", "igo", "igone", "ileana", "ithino", "olake", "ugate", "ugoni", "ukane", "ukate", "ukena", "ulane",
 			"upine", "utha", "uthea"]
 
-	def nameSur(self):
+	def generate_surname(self):
 		name_component = choice(self.nmMdF)
 		name_component2 = choice(self.nmMdL)
 		name_component3 = choice(self.nmSF)
 		name_component4 = choice(self.nmSL)
-		return testSwear(name_component + name_component2 + " " + name_component3 + name_component4)
+		return name_component + name_component2 + " " + name_component3 + name_component4
 
-	def nameFem(self):
+	def generate_feminine(self):
 		name_component = choice(self.nmFF)
 		name_component2 = choice(self.nmFL)
 		nMs = name_component + name_component2
-		return testSwear(nMs)
+		return nMs
 
-	def nameMas(self):
+	def generate_masculine(self):
 		name_component = choice(self.nmMF)
 		name_component2 = choice(self.nmML)
 		nMs = name_component + name_component2
-		return testSwear(nMs)
+		return nMs
 
 
 class Aasimar(Person):
@@ -413,7 +412,7 @@ class Aasimar(Person):
 	nm12 = ["a", "e", "i", "a", "e", "i", "a", "e", "i", "a", "e", "i", "a", "e", "i", "au", "ou", "oe"]
 	nm13 = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "h", "l", "m", "n", "r"]
 
-	def nameFem(self):
+	def generate_feminine(self):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm7)
@@ -434,9 +433,9 @@ class Aasimar(Person):
 
 			nMs = name_component + name_component2 + name_component3 + name_component4 + name_component6 + name_component7 + name_component5
 
-		return testSwear(nMs)
+		return nMs
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 2))
 		name_component = choice(self.nm1)
 		name_component2 = choice(self.nm2)
@@ -456,7 +455,7 @@ class Aasimar(Person):
 
 			nMs = name_component + name_component2 + name_component3 + name_component4 + name_component6 + name_component7 + name_component5
 
-		return testSwear(nMs)
+		return nMs
 
 
 class Aarakocra(Person):
@@ -468,7 +467,7 @@ class Aarakocra(Person):
 	nm4 = ["a", "e", "i", "a", "e", "i", "a", "e", "i", "a", "e", "i", "a", "e", "i", "aa", "ea", "ee", "ia", "ie"]
 	nm5 = ["", "", "", "", "c", "ck", "d", "f", "g", "hk", "k", "l", "r", "rr", "rc", "rk", "rrk", "s", "ss"]
 
-	def nameMas(self):
+	def generate_masculine(self):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm1)
@@ -485,4 +484,4 @@ class Aarakocra(Person):
 			name_component5 = choice(self.nm4)
 			nMs = name_component + name_component2 + name_component4 + name_component5 + name_component3
 
-		return testSwear(nMs)
+		return nMs

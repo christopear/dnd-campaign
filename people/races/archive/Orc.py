@@ -48,7 +48,7 @@ class Orcs(Person):
             "Snapper", "Spear", "Splitter", "Squasher", "Squelcher", "Squisher", "Strangler", "Sunderer", "Sword",
             "Trampler", "Trasher", "Vanquisher", "Wrecker"]
 
-    def nameSur(self):
+	def generate_surname(self):
         i = choice(range(0, 2))
         if i == 0:
             nSr = "The " + choice(self.nm9)
@@ -57,7 +57,7 @@ class Orcs(Person):
 
         return testSwear(nSr)
 
-    def nameFem(self):
+	def generate_feminine(self):
         i = choice(range(0, 2))
         name_component = choice(self.nm5)
         name_component2 = choice(self.nm6)
@@ -78,7 +78,7 @@ class Orcs(Person):
 
         return testSwear(nFm)
 
-    def nameMas(self):
+	def generate_masculine(self):
         i = choice(range(0, 2))
         name_component = choice(self.nm1)
         name_component2 = choice(self.nm2)

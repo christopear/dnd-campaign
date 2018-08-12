@@ -14,8 +14,7 @@ class Shardmind(Person):
            "shari", "shi", "shti", "shtu", "shu", "sunu", "ta", "tana", "tani", "tari", "ti", "tira", "tiru", "tua", "tum",
            "wia", "ya", "yara", "yua", "zu"]
 
-
-    def nameMas(self):
+	def generate_masculine(self):
         name_component = choice(self.nm1)
         name_component2 = choice(self.nm2)
         nMs = name_component + name_component2

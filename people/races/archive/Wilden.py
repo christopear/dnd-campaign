@@ -34,13 +34,13 @@ class Wilden(Person):
             "oris",
             "orren"]
 
-    def nameFem(self):
+	def generate_feminine(self):
         name_component = choice(self.nmFF)
         name_component2 = choice(self.nmFL)
         nMs = name_component + name_component2
         return testSwear(nMs)
 
-    def nameMas(self):
+	def generate_masculine(self):
         i = choice(range(0, 2))
         if i == 0:
             name_component = choice(self.nmMFf)

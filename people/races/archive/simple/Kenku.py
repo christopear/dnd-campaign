@@ -65,6 +65,5 @@ class Kenku(Person):
            "Crate Smash", "Crate Crack", "Crate Creak", "Ship Creak", "Sail Slap", "Rope Slap", "Rope Whip", "Book Drop",
            "Book Slam", "Page Turn", "Grain Trash", "Grain Mill", "Cork Pop", "Wood Scrape", "Sail Flick"]
 
-
-    def nameMas(self):
+	def generate_masculine(self):
            return testSwear(choice(self.nm1))
