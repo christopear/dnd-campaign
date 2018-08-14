@@ -36,6 +36,9 @@ class Dwarf(StandardPerson):
 		   "thel",
 		   "thiel", "tin", "tyn", "va", "van", "via", "vian", "waen", "win", "wyn", "wynn"]
 
+	def race_check(self):
+		pass
+
 
 class Elf(StandardPerson):
 	nm1 = ["Ad", "Ae", "Bal", "Bei", "Car", "Cra", "Dae", "Dor", "El", "Ela", "Er", "Far", "Fen", "Gen", "Glyn", "Hei",
@@ -61,6 +64,9 @@ class Elf(StandardPerson):
 		   "is",
 		   "vyre", "wenys", "wynn", "xina", "xisys", "ynore", "yra", "zana", "zorwyn"]
 
+	def race_check(self):
+		pass
+
 
 class Halfling(StandardPerson):
 	nm1 = ["An", "Ar", "Bar", "Bel", "Con", "Cor", "Dan", "Dav", "El", "Er", "Fal", "Fin", "Flyn", "Gar", "Go", "Hal",
@@ -85,6 +91,9 @@ class Halfling(StandardPerson):
 		   "ni", "nys", "ola", "ora", "phina", "prys", "rana", "ree", "ri", "ris", "sica", "sira", "sys", "tina",
 		   "trix",
 		   "ula", "vira", "vyre", "wyn", "wyse", "yola", "yra", "zana", "zira"]
+
+	def race_check(self):
+		pass
 
 
 class Halfelf(StandardPerson):
@@ -112,6 +121,9 @@ class Halfelf(StandardPerson):
 		   "nys", "ona", "phira", "pisys", "qarin", "qwyn", "rila", "rora", "seris", "stine", "sys", "thana", "theris",
 		   "tihne", "trana", "viel", "vyre", "walyn", "waris", "xaris", "xipha", "yaries", "yra", "zenya", "zira"]
 
+	def race_check(self):
+		pass
+
 
 class Gnome(StandardPerson):
 	nm1 = ["Al", "Ari", "Bil", "Bri", "Cal", "Cor", "Dav", "Dor", "Eni", "Er", "Far", "Fel", "Ga", "Gra", "His", "Hor",
@@ -132,6 +144,9 @@ class Gnome(StandardPerson):
 		   "qys", "rhana", "roe", "sany", "ssa", "sys", "tina", "tra", "wyn", "wyse", "xi", "xis", "yaris", "yore",
 		   "za",
 		   "zyre"]
+
+	def race_check(self):
+		pass
 
 
 class Dragonborn(Person):
@@ -214,6 +229,9 @@ class Dragonborn(Person):
 
 		return nSr
 
+	def race_check(self):
+		pass
+
 
 class HalfOrc(Person):
 	nm1 = ["Ag", "Agg", "Ar", "Arn", "As", "At", "Atr", "B", "Bar", "Bel", "Bor", "Br", "Brak", "C", "Cr", "D", "Dor",
@@ -259,6 +277,9 @@ class HalfOrc(Person):
 		name_component3 = choice(self.nm3)
 		nMs = name_component + name_component2 + name_component3
 		return nMs
+
+	def race_check(self):
+		pass
 
 
 class Tiefling(Person):
@@ -325,6 +346,9 @@ class Tiefling(Person):
 			nMs = name_component
 		return nMs
 
+	def race_check(self):
+		pass
+
 
 class Human(Person):
 	pass
@@ -379,6 +403,9 @@ class Calashite(Human):
 			nMs = name_component + name_component2 + name_component3 + name_component4 + name_component5
 
 		return nMs
+
+	def race_check(self):
+		pass
 
 
 class Chondathan(Human):
@@ -496,6 +523,9 @@ class Chondathan(Human):
 
 		return lname
 
+	def race_check(self):
+		pass
+
 
 class Damaran(Human):
 	# /* Damaran */
@@ -550,6 +580,9 @@ class Damaran(Human):
 		lname = name_component + name_component2
 
 		return lname
+
+	def race_check(self):
+		pass
 
 
 class Illuskan(Human):
@@ -606,6 +639,9 @@ class Illuskan(Human):
 		lname = name_component + name_component2
 
 		return lname
+
+	def race_check(self):
+		pass
 
 
 class Mulan(Human):
@@ -684,6 +720,9 @@ class Mulan(Human):
 
 		return lname
 
+	def race_check(self):
+		pass
+
 
 class Rashemi(Human):
 	# /* Rashemi */
@@ -758,6 +797,9 @@ class Rashemi(Human):
 
 		return lname
 
+	def race_check(self):
+		pass
+
 
 class Shou(Human):
 	# /* Shou */
@@ -785,6 +827,9 @@ class Shou(Human):
 		lname = name_component + name_component2 + name_component3
 
 		return lname
+
+	def race_check(self):
+		pass
 
 
 class Turami(Human):
@@ -851,8 +896,14 @@ class Turami(Human):
 
 		return lname
 
+	def race_check(self):
+		pass
+
 
 class EuroFantasy(Human):
+	def race_check(self):
+		pass
+
 	# /* Old Version */
 	nm83 = ["Delmon", "Karcsi", "Quesnel", "Aaron", "Abdiel", "Abdullah", "Abel", "Abelard", "Abilo", "Abraham",
 			"Abram",

@@ -204,6 +204,9 @@ class Drow(Person):
 			name_component3 = choice(self.nmF)
 			return name_component3
 
+	def race_check(self):
+		pass
+
 	def generate_masculine(self):
 		i = choice(range(0, 3))
 		if i == 0:

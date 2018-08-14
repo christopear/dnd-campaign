@@ -37,8 +37,7 @@ class Person:
 				", Gender: " + Gender(self.gender).name)
 
 	def race_check(self):
-		if self.race in ['Person', 'SimplePerson', 'StandardPerson']:
-			raise NotImplementedError("Use a standard race.")
+		raise NotImplementedError("Use a standard race.")
 
 	def generate_surname(self):
 		raise NotImplementedError("Last name generation not defined.")
@@ -72,8 +71,14 @@ class SimplePerson(Person):
 	def generate_masculine(self):
 		return choice(self.nm1)
 
+	def race_check(self):
+		pass
+
 
 class StandardPerson(Person):
+	def race_check(self):
+		pass
+
 	def generate_feminine(self):
 		name_component = choice(self.nm3)
 		name_component2 = choice(self.nm4)

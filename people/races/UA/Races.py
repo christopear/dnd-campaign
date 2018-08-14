@@ -17,6 +17,9 @@ class Changeling(Person):
 		nMs = name_component + name_component2 + name_component3
 		return nMs
 
+	def race_check(self):
+		pass
+
 
 class Genasi(SimplePerson):
 	nm1 = ["Ablaze", "Alight", "Ardor", "Ardour", "Arson", "Ash", "Austral", "Bake", "Beacon", "Blaze", "Blight",
@@ -65,6 +68,9 @@ class Genasi(SimplePerson):
 		   "Twister",
 		   "Vent", "Waft", "Wheeze", "Whiff", "Whirl", "Whirlwind", "Whisk", "Whistle", "Wind", "Wing", "Zephyr"]
 
+	def race_check(self):
+		pass
+
 
 class Warforged(SimplePerson):
 	nm1 = ["Abider", "Achiever", "Actor", "Adapter", "Adviser", "Aegis", "Agent", "Animal", "Apparatus", "Armament",
@@ -104,6 +110,9 @@ class Warforged(SimplePerson):
 		   "Voice", "Walker", "Ward", "Warden", "Watcher", "Whisperer", "Wielder", "Winker", "Winner", "Wonderer",
 		   "Wrestler", "Zealot", "Zero"]
 
+	def race_check(self):
+		pass
+
 
 class Shifter(SimplePerson):
 	nm1 = ["Acor", "Almond", "Ash", "Astro", "Badger", "Barb", "Basalt", "Basil", "Beast", "Birch", "Blast", "Blaze",
@@ -132,6 +141,9 @@ class Shifter(SimplePerson):
 		   "Sun", "Sunrise", "Sunset", "Sunshine", "Swill", "Thistle", "Tidal", "Tiger", "Tinder", "Topaz", "Twig",
 		   "Twilight", "Urchin", "Vapor", "Violet", "Whirl", "Willow", "Wind", "Wing", "Winter"]
 
+	def race_check(self):
+		pass
+
 
 class Gith(StandardPerson):
 	nm1 = ["Am", "Ar", "Ara", "Aza", "Bar", "Bra", "Bru", "Da", "Dar", "Dor", "Dra", "Dro", "Du", "Fa", "Far", "Fer",
@@ -148,6 +160,9 @@ class Gith(StandardPerson):
 	nm4 = ["a", "ah", "aka", "al", "arah", "arin", "aya", "ayah", "eah", "eka", "el", "ela", "elna", "elya", "elzal",
 		   "ena",
 		   "enah", "era", "erah", "eya", "ihn", "ila", "ilzin", "in", "ina", "ira", "iza", "mina", "ya", "yara"]
+
+	def race_check(self):
+		pass
 
 
 class Minotaur(Person):
@@ -175,6 +190,9 @@ class Minotaur(Person):
 			"leader", "mind", "pelt", "roar", "runner", "skin", "skull", "slash", "slayer", "speaker", "step",
 			"striker",
 			"vigor", "walker", "warrior"]
+
+	def race_check(self):
+		pass
 
 	def generate_surname(self):
 		name_component = choice(self.nmSF)

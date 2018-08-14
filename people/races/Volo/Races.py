@@ -45,6 +45,9 @@ class Lizardfolk(Person):
 
 		return nMs
 
+	def race_check(self):
+		pass
+
 
 class Kenku(SimplePerson):
 	nm1 = ["Angler", "Baker", "Barker", "Basher", "Bather", "Beggar", "Biter", "Boiler", "Bomber", "Bonker", "Bouncer",
@@ -122,6 +125,9 @@ class Kenku(SimplePerson):
 		   "Book Drop",
 		   "Book Slam", "Page Turn", "Grain Trash", "Grain Mill", "Cork Pop", "Wood Scrape", "Sail Flick"]
 
+	def race_check(self):
+		pass
+
 
 class Triton(Person):
 	nm1 = ["c", "d", "dh", "j", "jh", "k", "kh", "m", "n", "r", "v", "z"]
@@ -176,6 +182,9 @@ class Triton(Person):
 		name_component4 = choice(self.nm2)
 		nMs = name_component + name_component2 + name_component3 + name_component4 + "s"
 		return nMs
+
+	def race_check(self):
+		pass
 
 
 class Tabaxi(Person):
@@ -330,6 +339,9 @@ class Tabaxi(Person):
 			names = name_component + " " + name_component2 + " (" + name_component2 + ")"
 		return names
 
+	def race_check(self):
+		pass
+
 
 class Goliath(Person):
 	nmFF = ["Age", "Ane", "Gau", "Ge", "Ina", "Kau", "Ke", "Ki", "Kuo", "La", "Le", "Maa", "Man", "Mau", "Me", "Na",
@@ -385,6 +397,9 @@ class Goliath(Person):
 		name_component2 = choice(self.nmML)
 		nMs = name_component + name_component2
 		return nMs
+
+	def race_check(self):
+		pass
 
 
 class Aasimar(Person):
@@ -457,12 +472,19 @@ class Aasimar(Person):
 
 		return nMs
 
+	def race_check(self):
+		pass
+
 
 class Aarakocra(Person):
 	nm1 = ["", "", "", "", "", "c", "cl", "cr", "d", "g", "gr", "h", "k", "kh", "kl", "kr", "q", "qh", "ql", "qr", "r",
 		   "rh", "s", "y", "z"]
 	nm2 = ["a", "e", "i", "u", "a", "e", "i", "u", "a", "e", "i", "u", "a", "e", "i", "u", "a", "e", "i", "u", "a", "e",
 		   "i", "u", "a", "e", "i", "u", "ae", "aia", "ee", "oo", "ou", "ua", "uie"]
+
+	def race_check(self):
+		pass
+
 	nm3 = ["c", "cc", "k", "kk", "l", "ll", "q", "r", "rr"]
 	nm4 = ["a", "e", "i", "a", "e", "i", "a", "e", "i", "a", "e", "i", "a", "e", "i", "aa", "ea", "ee", "ia", "ie"]
 	nm5 = ["", "", "", "", "c", "ck", "d", "f", "g", "hk", "k", "l", "r", "rr", "rc", "rk", "rrk", "s", "ss"]

@@ -52,6 +52,9 @@ class MindFlayer(Person):
 
 		return nMs
 
+	def race_check(self):
+		pass
+
 
 class Beholder(Person):
 	nm1 = ["", "", "", "", "", "b", "c", "ch", "d", "dh", "f", "g", "gh", "j", "kh", "l", "m", "n", "q", "qh", "r", "s",
@@ -109,6 +112,9 @@ class Beholder(Person):
 
 		return nMs
 
+	def race_check(self):
+		pass
+
 
 class Gnoll(Person):
 	nm1 = ["a", "e", "i", "o", "u"]
@@ -161,6 +167,9 @@ class Gnoll(Person):
 
 		nMs = name_component + name_component2 + name_component3 + name_component4
 		return nMs
+
+	def race_check(self):
+		pass
 
 
 class Hag(Person):
@@ -278,6 +287,9 @@ class Hag(Person):
 		name_component2 = choice(self.nm2)
 		return name_component + " " + name_component2
 
+	def race_check(self):
+		pass
+
 
 class Kobolds(Person):
 	nm1 = ["", "", "", "", "d", "g", "h", "k", "m", "n", "r", "s", "sn", "t", "v", "z"]
@@ -307,6 +319,9 @@ class Kobolds(Person):
 			nMs = name_component + name_component2 + name_component3 + name_component5 + name_component2
 
 		return nMs
+
+	def race_check(self):
+		pass
 
 
 class Orcs(Person):
@@ -403,8 +418,14 @@ class Orcs(Person):
 
 		return nMs
 
+	def race_check(self):
+		pass
+
 
 class YuanTi(Person):
+	def race_check(self):
+		pass
+
 	nm1 = ["", "", "", "", "", "h", "m", "n", "s", "sh", "ss", "ssh", "sz", "t", "th", "y", "z", "zh", "zs"]
 	nm2 = ["a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e",
 		   "i", "o", "u", "oa", "ui"]
