@@ -1,58 +1,44 @@
-from enum import Enum
 from random import choice
 
-from constructs.DeathAge import get_death_age
+from constructs.DeathAgeCalculator import DeathAgeCalculator
 from constructs.gender import Gender
 
 
-class Gender(Enum):
-	female = 1
-	male = 2
-
-
-class AgeExpectation:
-	def __init__(self, alpha, beta):
-		self.alpha = alpha
-		self.beta = beta
-
 class Person:
+	# todo change this for each race
+	death_age_calculator = DeathAgeCalculator()
+
 	def __init__(self
+				 , first_name=None
+				 , surname=None
 				 , mother=None
 				 , father=None
+				 , partner=None
 				 , gender=None
 				 , age=None
 				 ):
-
-		self.death_age = get_death_age()
+		self.partner = partner
+		self.surname = surname
+		self.first_name = first_name
 		self.age = age
 		self.gender = gender
 		self.mother = mother
 		self.father = father
+		self.race = self.__class__.__name__
 
-		self.generate_gender(gender)
-		self.generate_age(age)
-		self.generate_death_age()
+		self.gender_check()
+		self.race_check()
+		self.first_name_check()
+		self.surname_check()
 
-	def generate_gender(self, gender):
-		if gender is None:
-			self.gender = choice(list(Gender))
+	def __str__(self):
+		return ("Race: " + self.race +
+				", Name: " + self.first_name + " " + self.surname +
+				", Gender: " + Gender(self.gender).name)
 
-	def generate_age(self, age):
-		if age is None:
-			self.age = choice(list(Gender))
-
-	# self.race = self.__class__.__name__
-
-	# def generate_race(self):
-	# 	if self.mother is None and self.father is None:
-	# 		pass
-	# 	elif self.mother is None and self.father is not None:
-	# 		pass
-	# 	elif self.mother is not None and self.father is None:
-	# 		pass
-	# 	else:
-	# 		pass
-
+	def race_check(self):
+		if self.race in ['Person', 'SimplePerson', 'StandardPerson']:
+			raise NotImplementedError("Use a standard race.")
 
 	def generate_surname(self):
 		raise NotImplementedError("Last name generation not defined.")
@@ -65,6 +51,21 @@ class Person:
 	def generate_masculine(self):
 		raise NotImplementedError("Masculine name generation not defined.")
 		return None
+
+	def gender_check(self):
+		if self.gender is None:
+			self.gender = choice(list(Gender))
+
+	def first_name_check(self):
+		if self.first_name is None:
+			if self.gender is Gender.male:
+				self.first_name = self.generate_masculine()
+			elif self.gender is Gender.female:
+				self.first_name = self.generate_feminine()
+
+	def surname_check(self):
+		if self.surname is None:
+			self.surname = self.generate_surname()
 
 
 class SimplePerson(Person):

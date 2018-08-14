@@ -1,7 +1,7 @@
 import numpy as np
 
 
-class DeathAge:
+class DeathAgeCalculator:
 	def __init__(self, alpha=80, beta=0.7, beta_x=0.05):
 		"""
 		:param alpha: while not exactly equal, can be thought of as the turning point, the median death age
@@ -27,12 +27,12 @@ class DeathAge:
 		retter = np.math.exp(-M)
 		return retter
 
-	def death_odds(self, t):
+	def death_odds(self, year):
 		"""
 		a function to calculate the probability of surviving at any particular year
-		:param t: represents age
+		:param year: represents age
 		:return: the odds of surviving at that age
 		"""
-		t = np.asarray(t)
+		year = np.asarray(year)
 
-		return np.vectorize(self.survival)(t) / np.vectorize(self.survival)(np.subtract(t, 1))
+		return np.vectorize(self.survival)(year) / np.vectorize(self.survival)(np.subtract(year, 1))
