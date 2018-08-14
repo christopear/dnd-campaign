@@ -36,24 +36,22 @@ class Person:
 		self.surname_check()
 
 	def __str__(self):
-		return ("Race: " + self.race +
-				", Name: " + self.first_name + " " + self.surname +
-				", Gender: " + Gender(self.gender).name)
-
-	def race_check(self):
-		raise NotImplementedError("Use a standard race.")
+		retter = "Race: " + self.race
+		retter += ", Name: " + self.first_name + " " + self.surname
+		retter += ", Gender: " + Gender(self.gender).name
+		return retter
 
 	def generate_surname(self):
 		raise NotImplementedError("Last name generation not defined.")
-		return None
 
 	def generate_feminine(self):
 		raise NotImplementedError("Feminine name generation not defined.")
-		return None
 
 	def generate_masculine(self):
 		raise NotImplementedError("Masculine name generation not defined.")
-		return None
+
+	def race_check(self):
+		raise NotImplementedError("Use a standard race.")
 
 	def gender_check(self):
 		if self.gender is None:
