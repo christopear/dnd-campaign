@@ -2,36 +2,37 @@ from people.Person import Person
 
 
 class Community:
-	def __init__(self, id, community_name):
-		self.id = id
-        self.community_name = community_name
-        self.people = list()
+	ID = 0
 
-    def __str__(self):
-        retter = "Name: " + self.community_name + "\n"
-        retter += "Number of people: " + self.get_population()
-        return retter
+	def __init__(self, community_name):
+		self.id = Community.ID
+		Community.ID += 1
 
-    def add_person(self, person):
-        if type(person) is not Person:
-            raise TypeError("You must add a person.")
+		self.community_name = community_name
+		self.people = list()
 
-        self.people.append(person)
+	def __str__(self):
+		retter = "Name: " + self.community_name + "\n"
+		retter += "Number of people: " + str(self.get_population())
+		return retter
 
-    def remove_person(self, person):
-        if person not in self.people:
-            raise LookupError("That person is not in the community.")
+	def add_person(self, person):
+		if type(person) is not Person:
+			raise TypeError("You must add a person.")
 
-        self.people.remove(person)
+		self.people.append(person)
 
-    def get_community_name(self):
-        return self.community_name
+	def remove_person(self, person):
+		if person not in self.people:
+			raise LookupError("That person is not in the community.")
+
+		self.people.remove(person)
+
+	def get_community_name(self):
+		return self.community_name
 
 	def get_community_level(self):
 		pass
 
-    def get_population(self):
-        return len(self.people)
-
-
-
+	def get_population(self):
+		return len(self.people)
