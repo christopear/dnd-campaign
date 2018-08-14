@@ -71,13 +71,9 @@ class SimplePerson(Person):
 	def generate_masculine(self):
 		return choice(self.nm1)
 
-	def race_check(self):
-		pass
 
 
 class StandardPerson(Person):
-	def race_check(self):
-		pass
 
 	def generate_feminine(self):
 		name_component = choice(self.nm3)
