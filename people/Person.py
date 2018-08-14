@@ -1,8 +1,12 @@
+from enum import Enum
 from random import choice
 
-from constructs.DeathAgeCalculator import DeathAgeCalculator
-from constructs.gender import Gender
+from tools.DeathAgeCalculator import DeathAgeCalculator
 
+
+class Gender(Enum):
+	female = 1
+	male = 2
 
 class Person:
 	# todo change this for each race
