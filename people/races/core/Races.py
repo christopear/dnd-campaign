@@ -1,4 +1,7 @@
-from people.Person import *
+from random import choice
+
+from people.Person import Person
+from people.Person import StandardPerson
 
 
 class Dwarf(StandardPerson):
