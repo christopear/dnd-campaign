@@ -1,39 +1,38 @@
 import numpy as np
 
-death_years = np.arange(0, 10000)
 
+class DeathAge:
+	def __init__(self, alpha=80, beta=0.7, beta_x=0.05):
+		"""
+		:param alpha: while not exactly equal, can be thought of as the turning point, the median death age
+		:param beta: represents the curvature of the distribution
+		:param beta_x: represents the curvature of the distribution
+		"""
+		self.alpha = alpha
+		self.beta = beta
+		self.beta_x = beta_x
 
-def survival(alpha=80, beta=0.7, beta_x=0.05):
-	t = death_years
-	LHS = np.divide(t, alpha)
+	def survival(self, t):
+		"""
+		generalised survival function for calculating the percentage of the population remaining x years after birth
+		:param t: represents age
+		:return: the percentage left alive
+		"""
+		t = np.asarray(t)
 
-	RHS = np.add(beta, np.multiply(beta_x, t))
-	M = np.power(LHS, RHS)
-	retter = np.math.exp(-M)
-	return retter
+		LHS = np.divide(t, self.alpha)
 
+		RHS = np.add(self.beta, np.multiply(self.beta_x, t))
+		M = np.power(LHS, RHS)
+		retter = np.math.exp(-M)
+		return retter
 
-def death_odds():
-	pass
+	def death_odds(self, t):
+		"""
+		a function to calculate the probability of surviving at any particular year
+		:param t: represents age
+		:return: the odds of surviving at that age
+		"""
+		t = np.asarray(t)
 
-
-def get_death_odds(current_age):
-	'''
-	this function gets the odds of dying in the next year
-	:return: the probability of death
-	'''
-
-
-# alive = survival()
-# dead = ((lag(alive)) - alive) / (lag(alive))
-# dead[1] = 0
-
-
-def get_death_age():
-	grim_reaper = np.random.uniform(0, 1, (1,))
-
-	s2 = np.vectorize(survival)
-
-	results = s2()
-
-	return sum(np.less(grim_reaper, results))
+		return np.vectorize(self.survival)(t) / np.vectorize(self.survival)(np.subtract(t, 1))
