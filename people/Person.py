@@ -72,7 +72,6 @@ class SimplePerson(Person):
 		return choice(self.nm1)
 
 
-
 class StandardPerson(Person):
 
 	def generate_feminine(self):

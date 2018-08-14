@@ -480,7 +480,7 @@ class Chondathan(Human):
 			"brooke",
 			"fall", "fallow", "horn", "root", "shine", "swallow", "thorne", "willow", "wood"]
 
-	def generate_masculine(self, i):
+	def generate_masculine(self):
 		name_component = choice(self.nm13)
 		name_component2 = choice(self.nm14)
 		name_component3 = choice(self.nm15)
@@ -595,7 +595,7 @@ class Illuskan(Human):
 	nm39 = ["fn", "fl", "fr", "g", "l", "lg", "lr", "m", "n", "r", "rh", "sh", "str", "th", "thr", "v", "vr"]
 	nm40 = ["", "", "", "", "y"]
 
-	def generate_masculine(self, i):
+	def generate_masculine(self):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm34)
@@ -744,7 +744,7 @@ class Rashemi(Human):
 			"rk",
 			"th", "tr", "tv", "v", "vr", "vz", "b", "d", "g", "k", "m", "n", "r", "v"]
 
-	def generate_masculine(self, i):
+	def generate_masculine(self):
 		i = choice(range(0, 2))
 
 		name_component = choice(self.nm54)
