@@ -17,7 +17,7 @@ Each race has been assigned its own class, inheriting from a broader set of clas
 
 #### Life expectancy
 
-Work has begun on creating the statistical methods for life expectancy. Adapting the Weibull distribution a distribution is implemented that calculates the survival rate (e.g. 100 people born, X many alive at 50 yo). This will be adapted to provide probabilities each year of death - allowing a more fluid way of calculating death age (rather than just pre-determining it).
+Work has begun on creating the statistical methods for life expectancy. Adapting the Weibull distribution a distribution is implemented that calculates the scalar_survival rate (e.g. 100 people born, X many alive at 50 yo). This will be adapted to provide probabilities each year of death - allowing a more fluid way of calculating death age (rather than just pre-determining it).
 
 
 ## Future steps

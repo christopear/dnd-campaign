@@ -12,9 +12,9 @@ class DeathAgeCalculator:
 		self.beta = beta
 		self.beta_x = beta_x
 
-	def survival(self, t):
+	def scalar_survival(self, t):
 		"""
-		generalised survival function for calculating the percentage of the population remaining x years after birth
+		generalised scalar_survival function for calculating the percentage of the population remaining x years after birth
 		:param t: represents age
 		:return: the percentage left alive
 		"""
@@ -35,4 +35,4 @@ class DeathAgeCalculator:
 		"""
 		year = np.asarray(year)
 
-		return np.vectorize(self.survival)(year) / np.vectorize(self.survival)(np.subtract(year, 1))
+		return np.vectorize(self.scalar_survival)(year) / np.vectorize(self.scalar_survival)(np.subtract(year, 1))
