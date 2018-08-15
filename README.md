@@ -24,6 +24,9 @@ Work has begun on creating the statistical methods for life expectancy (see Deat
 
 This has been adapted to provide probability of death at each year - allowing future modifiers to be applied to increase death probabilities at any given time without a preset death age.
 
+### Communities
+
+Communities are in very early stages, however the basic structure has been developed. It is envisaged that groups of people will reside in a community, allowing people to migrate between communities.
 
 ## Future steps
 
