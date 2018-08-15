@@ -89,6 +89,13 @@ class Person(abc.ABC):
 		return (self.gender is Gender.male and self.partner.gender is Gender.female) or \
 			   (self.gender is Gender.female and self.partner.gender is Gender.male)
 
+	def add_child(self, child):
+		if not self.can_have_children():
+			raise ReferenceError(str(self) + " has no partner.")
+
+		self.children.append(child)
+		self.partner.children.append(child)
+
 	def create_child(self, race=None):
 		"""
 		a function for creating a child with the person's partner
@@ -104,12 +111,11 @@ class Person(abc.ABC):
 			child_class = race
 
 		if self.gender is Gender.female:
-			child = child_class(father=self.partner, mother=self)
+			child = child_class(father=self.partner, mother=self, age=0)
 		else:
-			child = child_class(father=self, mother=self.partner)
+			child = child_class(father=self, mother=self.partner, age=0)
 
-		self.children.append(child)
-		self.partner.children.append(child)
+		self.add_child(child)
 
 		return child
 
