@@ -1,3 +1,4 @@
+import abc
 from random import choice
 
 from people.Person import Person
@@ -350,7 +351,7 @@ class Tiefling(Person):
 		pass
 
 
-class Human(Person):
+class Human(Person, abc.ABC):
 	pass
 
 

@@ -1,3 +1,4 @@
+import abc
 from enum import Enum
 from random import choice
 
@@ -8,7 +9,8 @@ class Gender(Enum):
 	female = 1
 	male = 2
 
-class Person:
+
+class Person(abc.ABC):
 	# todo change this for each race
 	death_age_calculator = DeathAgeCalculator()
 
@@ -41,17 +43,21 @@ class Person:
 		retter += ", Gender: " + Gender(self.gender).name
 		return retter
 
+	@abc.abstractmethod
 	def generate_surname(self):
-		raise NotImplementedError("Last name generation not defined.")
+		pass
 
+	@abc.abstractmethod
 	def generate_feminine(self):
-		raise NotImplementedError("Feminine name generation not defined.")
+		pass
 
+	@abc.abstractmethod
 	def generate_masculine(self):
-		raise NotImplementedError("Masculine name generation not defined.")
+		pass
 
+	@abc.abstractmethod
 	def race_check(self):
-		raise NotImplementedError("Use a standard race.")
+		pass
 
 	def gender_check(self):
 		if self.gender is None:
@@ -69,13 +75,12 @@ class Person:
 			self.surname = self.generate_surname()
 
 
-class SimplePerson(Person):
+class SimplePerson(Person, abc.ABC):
 	def generate_masculine(self):
 		return choice(self.nm1)
 
 
-class StandardPerson(Person):
-
+class StandardPerson(Person, abc.ABC):
 	def generate_feminine(self):
 		name_component = choice(self.nm3)
 		name_component2 = choice(self.nm4)
