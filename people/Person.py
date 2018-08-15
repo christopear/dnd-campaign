@@ -91,25 +91,29 @@ class Person(abc.ABC):
 
 	def create_child(self, race=None):
 		"""
-		a function for creating a child with the person's partner. the child is always "created" by the female, but can
-		be called by both the father and the mother
+		a function for creating a child with the person's partner
 		:param race: force the race of the child
 		:return: a child
 		"""
 		if not self.can_have_children():
 			raise ReferenceError(str(self) + " has no partner.")
 
-		if self.gender is Gender.female:
-			if race is None:
-				child_class = choice([self.__class__, self.partner.__class__])
-			else:
-				child_class = race
-			return child_class(father=self.partner, mother=self)
+		if race is None:
+			child_class = choice([self.__class__, self.partner.__class__])
 		else:
-			return self.partner.create_child()
+			child_class = race
 
-		# endregion
+		if self.gender is Gender.female:
+			child = child_class(father=self.partner, mother=self)
+		else:
+			child = child_class(father=self, mother=self.partner)
 
+		self.children.append(child)
+		self.partner.children.append(child)
+
+		return child
+
+	# endregion
 
 
 class SimplePerson(Person, abc.ABC):
