@@ -33,7 +33,6 @@ class Person(abc.ABC):
 		self.race = self.__class__.__name__
 
 		self.gender_check()
-		self.race_check()
 		self.first_name_check()
 		self.surname_check()
 
@@ -53,10 +52,6 @@ class Person(abc.ABC):
 
 	@abc.abstractmethod
 	def generate_masculine(self):
-		pass
-
-	@abc.abstractmethod
-	def race_check(self):
 		pass
 
 	def gender_check(self):
