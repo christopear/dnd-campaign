@@ -83,6 +83,17 @@ class Person(abc.ABC):
 	# endregion
 
 	# region actual functions
+	def has_father(self):
+		return self.father is not None
+
+	def has_mother(self):
+		return self.mother is not None
+
+	def has_both_parents(self):
+		return self.has_father() and self.has_mother()
+
+	def is_alive(self):
+		pass
 
 	def marry(self, other):
 		self.partner = other
@@ -91,6 +102,12 @@ class Person(abc.ABC):
 	def can_have_children(self):
 		return (self.gender is Gender.male and self.partner.gender is Gender.female) or \
 			   (self.gender is Gender.female and self.partner.gender is Gender.male)
+
+	def get_is_childs_parents(self, child):
+		if self.gender is Gender.female:
+			return child.father is self.partner and child.mother is self
+		else:
+			return child.father is self and child.mother is self.partner
 
 	def add_child(self, child):
 		if not self.can_have_children():
