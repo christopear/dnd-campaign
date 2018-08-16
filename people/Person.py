@@ -34,10 +34,10 @@ class Person(abc.ABC):
 		self.children = children
 		self.race = self.__class__.__name__
 
-		self.gender_check()
-		self.first_name_check()
-		self.surname_check()
-		self.children_check()
+		self.check_gender()
+		self.check_first_name()
+		self.check_surname()
+		self.check_children()
 
 	def __str__(self):
 		retter = "Race: " + self.race
@@ -45,6 +45,7 @@ class Person(abc.ABC):
 		retter += ", Gender: " + Gender(self.gender).name
 		return retter
 
+	# region abstract generators
 	@abc.abstractmethod
 	def generate_surname(self):
 		pass
@@ -57,23 +58,25 @@ class Person(abc.ABC):
 	def generate_masculine(self):
 		pass
 
+	# endregion
+
 	# region checker functions
-	def gender_check(self):
+	def check_gender(self):
 		if self.gender is None:
 			self.gender = choice(list(Gender))
 
-	def first_name_check(self):
+	def check_first_name(self):
 		if self.first_name is None:
 			if self.gender is Gender.male:
 				self.first_name = self.generate_masculine()
 			elif self.gender is Gender.female:
 				self.first_name = self.generate_feminine()
 
-	def surname_check(self):
+	def check_surname(self):
 		if self.surname is None:
 			self.surname = self.generate_surname()
 
-	def children_check(self):
+	def check_children(self):
 		if self.children is None:
 			self.children = list()
 
@@ -96,6 +99,9 @@ class Person(abc.ABC):
 		self.children.append(child)
 		self.partner.children.append(child)
 
+	def get_child_race(self):
+		return choice([self.__class__, self.partner.__class__])
+
 	def create_child(self, race=None):
 		"""
 		a function for creating a child with the person's partner
@@ -106,7 +112,7 @@ class Person(abc.ABC):
 			raise ReferenceError(str(self) + " has no partner.")
 
 		if race is None:
-			child_class = choice([self.__class__, self.partner.__class__])
+			child_class = self.get_child_race()
 		else:
 			child_class = race
 
