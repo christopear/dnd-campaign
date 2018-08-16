@@ -28,6 +28,12 @@ This has been adapted to provide probability of death at each year - allowing fu
 
 Communities are in very early stages, however the basic structure has been developed. It is envisaged that groups of people will reside in a community, allowing people to migrate between communities.
 
+## Unit testing
+
+### People
+
+Unit testing has been set up for testing people. This will need to be exponentially added on to keep up with movement of objects.
+
 ## Future steps
 
 Plans have been undertaken to figure out how to model families (e.g. with a seperate object or all internal to the person). Thought has also gone into power dynamics and economics.
