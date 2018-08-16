@@ -1,6 +1,6 @@
 import abc
 from enum import Enum
-from random import choice
+from random import choice, randint
 
 from tools.DeathAgeCalculator import DeathAgeCalculator
 
@@ -23,7 +23,11 @@ class Person(abc.ABC):
 				 , partner=None
 				 , gender=None
 				 , age=None
+				 , occupation=None
+				 , money=None
 				 ):
+		self.occupation = occupation
+		self.money = money
 		self.partner = partner
 		self.surname = surname
 		self.first_name = first_name
@@ -38,11 +42,23 @@ class Person(abc.ABC):
 		self.check_first_name()
 		self.check_surname()
 		self.check_children()
+		self.check_money()
+		self.check_occupation()
+		self.check_age()
 
 	def __str__(self):
 		retter = "Race: " + self.race
 		retter += ", Name: " + self.first_name + " " + self.surname
 		retter += ", Gender: " + Gender(self.gender).name
+		return retter
+
+	def description(self):
+		retter = "{} {} is a {} year old {}.".format(
+			self.first_name,
+			self.surname,
+			self.age,
+			self.gender.name
+		)
 		return retter
 
 	# region abstract generators
@@ -65,6 +81,10 @@ class Person(abc.ABC):
 		if self.gender is None:
 			self.gender = choice(list(Gender))
 
+	def check_age(self):
+		if self.age is None:
+			self.age = randint(0, 122)
+
 	def check_first_name(self):
 		if self.first_name is None:
 			if self.gender is Gender.male:
@@ -80,9 +100,16 @@ class Person(abc.ABC):
 		if self.children is None:
 			self.children = list()
 
+	def check_money(self):
+		if self.money is None:
+			self.money = 0
+
+	def check_occupation(self):
+		pass
 	# endregion
 
 	# region actual functions
+
 	def has_father(self):
 		return self.father is not None
 
