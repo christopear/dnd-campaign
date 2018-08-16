@@ -15,7 +15,6 @@ class TestPerson(TestCase):
 	def test_first_name(self):
 		p1 = Chondathan(
 			first_name="Olivia"
-			, surname="Healey"
 		)
 
 		self.assertEqual(p1.first_name, "Olivia")
