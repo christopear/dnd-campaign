@@ -28,6 +28,13 @@ This has been adapted to provide probability of death at each year - allowing fu
 
 Communities are in very early stages, however the basic structure has been developed. It is envisaged that groups of people will reside in a community, allowing people to migrate between communities.
 
+### Corporations
+
+When the time comes, people will have corporations. At first this will be as simple as
+Joe Bloggs owns a mill, employs 2 people, they do millwork. In future I would like to see
+it progress into simulating some basic financial investment AI as to when
+companies are started, companies failing, etc.
+
 ## Unit testing
 
 ### People
