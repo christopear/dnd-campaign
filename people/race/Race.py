@@ -5,6 +5,9 @@ class Race(abc.ABC):
 	# todo change this for each race
 	# death_age_calculator = DeathAgeCalculator()
 
+	def __str__(self):
+		return self.__class__.__name__
+
 	# region abstract generators
 	@abc.abstractmethod
 	def generate_surname(self):
