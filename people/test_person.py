@@ -1,26 +1,25 @@
 from unittest import TestCase
 
-from people.Person import Gender
-from people.race.core.Races import *
+from people.Person import *
 
 
 class TestPerson(TestCase):
 	def test_gender(self):
-		p1 = Chondathan(gender=Gender.male)
+		p1 = Person(gender=Gender.male)
 		self.assertEqual(p1.gender, Gender.male)
 
-		p2 = Chondathan(gender=Gender.female)
+		p2 = Person(gender=Gender.female)
 		self.assertEqual(p2.gender, Gender.female)
 
 	def test_first_name(self):
-		p1 = Chondathan(
+		p1 = Person(
 			first_name="Olivia"
 		)
 
 		self.assertEqual(p1.first_name, "Olivia")
 
 	def test_surname(self):
-		p1 = Chondathan(
+		p1 = Person(
 			surname="Healey"
 		)
 
@@ -28,8 +27,8 @@ class TestPerson(TestCase):
 
 	def test_marry(self):
 		# straight
-		p1 = Human(gender=Gender.male)
-		p2 = Human(gender=Gender.female)
+		p1 = Person(gender=Gender.male)
+		p2 = Person(gender=Gender.female)
 
 		p1.marry(p2)
 
@@ -37,8 +36,8 @@ class TestPerson(TestCase):
 		self.assertEqual(p2.partner, p1)
 
 		# gay
-		p1 = Human(gender=Gender.male)
-		p2 = Human(gender=Gender.male)
+		p1 = Person(gender=Gender.male)
+		p2 = Person(gender=Gender.male)
 
 		p1.marry(p2)
 
@@ -46,8 +45,8 @@ class TestPerson(TestCase):
 		self.assertEqual(p2.partner, p1)
 
 		# gay 2
-		p1 = Human(gender=Gender.female)
-		p2 = Human(gender=Gender.female)
+		p1 = Person(gender=Gender.female)
+		p2 = Person(gender=Gender.female)
 
 		p1.marry(p2)
 
@@ -56,8 +55,8 @@ class TestPerson(TestCase):
 
 	def test_can_have_children(self):
 		# male
-		p1 = Chondathan(gender=Gender.male)
-		p2 = Chondathan(gender=Gender.male)
+		p1 = Person(gender=Gender.male)
+		p2 = Person(gender=Gender.male)
 
 		p1.marry(p2)
 
@@ -65,8 +64,8 @@ class TestPerson(TestCase):
 		self.assertFalse(p2.can_have_children())
 
 		# female
-		p1 = Chondathan(gender=Gender.female)
-		p2 = Chondathan(gender=Gender.female)
+		p1 = Person(gender=Gender.female)
+		p2 = Person(gender=Gender.female)
 
 		p1.marry(p2)
 
@@ -74,8 +73,8 @@ class TestPerson(TestCase):
 		self.assertFalse(p2.can_have_children())
 
 		# straight
-		p1 = Chondathan(gender=Gender.male)
-		p2 = Chondathan(gender=Gender.female)
+		p1 = Person(gender=Gender.male)
+		p2 = Person(gender=Gender.female)
 
 		p1.marry(p2)
 
@@ -83,10 +82,10 @@ class TestPerson(TestCase):
 		self.assertTrue(p2.can_have_children())
 
 	def test_add_child(self):
-		p1 = Chondathan(gender=Gender.male)
-		p2 = Chondathan(gender=Gender.female)
+		p1 = Person(gender=Gender.male)
+		p2 = Person(gender=Gender.female)
 
-		p3 = Chondathan(father=p1, mother=p2)
+		p3 = Person(father=p1, mother=p2)
 		p1.marry(p2)
 		p1.add_child(p3)
 
@@ -97,23 +96,23 @@ class TestPerson(TestCase):
 		self.assertIn(p3, p2.children)
 
 	def test_get_child_race(self):
-		p1 = Chondathan(gender=Gender.male)
-		p2 = Chondathan(gender=Gender.female)
+		p1 = Person(gender=Gender.male)
+		p2 = Person(gender=Gender.female)
 
 		p1.marry(p2)
 
-		self.assertEqual(p1.get_child_race(), Chondathan)
+		self.assertEqual(p1.get_child_race(), Person)
 
-		p1 = Chondathan(gender=Gender.male)
-		p2 = Illuskan(gender=Gender.female)
+		p1 = Person(gender=Gender.male)
+		p2 = Person(gender=Gender.female)
 
 		p1.marry(p2)
 
-		self.assertIn(p1.get_child_race(), [Chondathan, Illuskan])
+		self.assertIn(p1.get_child_race(), [Person, Person])
 
 	def test_create_child(self):
-		p1 = Chondathan(gender=Gender.male)
-		p2 = Chondathan(gender=Gender.female)
+		p1 = Person(gender=Gender.male)
+		p2 = Person(gender=Gender.female)
 
 		p1.marry(p2)
 
@@ -126,8 +125,8 @@ class TestPerson(TestCase):
 		self.assertEqual(p2, p3.mother)
 
 	def test_get_is_childs_parents(self):
-		p1 = Chondathan(gender=Gender.male)
-		p2 = Chondathan(gender=Gender.female)
+		p1 = Person(gender=Gender.male)
+		p2 = Person(gender=Gender.female)
 
 		p1.marry(p2)
 
@@ -138,7 +137,7 @@ class TestPerson(TestCase):
 		self.assertTrue(p1.get_is_childs_parents(p3))
 		self.assertTrue(p2.get_is_childs_parents(p3))
 
-		p4 = Illuskan()
+		p4 = Person()
 
 		self.assertNotEqual(p1, p4.father)
 		self.assertNotEqual(p2, p4.mother)
@@ -146,8 +145,8 @@ class TestPerson(TestCase):
 		self.assertFalse(p2.get_is_childs_parents(p4))
 
 	def test_has_both_parents(self):
-		p1 = Chondathan(gender=Gender.male)
-		p2 = Chondathan(gender=Gender.female)
+		p1 = Person(gender=Gender.male)
+		p2 = Person(gender=Gender.female)
 
 		p1.marry(p2)
 

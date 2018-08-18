@@ -1,8 +1,6 @@
 from enum import Enum
 from random import choice, randint
 
-from people.race.Race import Race
-
 
 class Gender(Enum):
 	female = 1
@@ -35,14 +33,15 @@ class Person:
 		self.children = children
 		self.race = race
 
+		self.check_race()
 		self.check_gender()
-		self.check_first_name()
-		self.check_surname()
+		# self.check_first_name()
+		# self.check_surname()
 		self.check_children()
 		self.check_money()
 		self.check_occupation()
 		self.check_age()
-		self.check_race()
+
 
 	def __str__(self):
 		retter = "Race: " + self.race
@@ -69,15 +68,10 @@ class Person:
 			self.age = randint(0, 122)
 
 	def check_first_name(self):
-		if self.first_name is None:
-			if self.gender is Gender.male:
-				self.first_name = self.generate_masculine()
-			elif self.gender is Gender.female:
-				self.first_name = self.generate_feminine()
+		pass
 
 	def check_surname(self):
-		if self.surname is None:
-			self.surname = self.generate_surname()
+		pass
 
 	def check_children(self):
 		if self.children is None:
@@ -91,8 +85,7 @@ class Person:
 		pass
 
 	def check_race(self):
-		if self.race is None:
-			self.race = choice(Race.HUMANS)
+		pass
 	# endregion
 
 	# region actual functions

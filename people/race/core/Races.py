@@ -1,8 +1,6 @@
-import abc
 from random import choice
 
-from people.Person import Race
-from people.Person import StandardRace
+from people.race.Race import StandardRace, Race
 
 
 class Dwarf(StandardRace):
@@ -327,7 +325,7 @@ class Tiefling(Race):
 		return nMs
 
 
-class Human(Race, abc.ABC):
+class Human(Race):
 	# surname
 	nm21 = ["Axe", "Glow", "Blade", "Blood", "Bone", "Cloud", "Crag", "Crest", "Doom", "Dream", "Coven", "Elf", "Fern",
 			"Feather", "Fire", "Fist", "Flame", "Forest", "Hammer", "Heart", "Hell", "Leaf", "Light", "Moon", "Rage",

@@ -1,4 +1,6 @@
-from people.Person import *
+from random import choice
+
+from people.race.Race import Race
 
 
 class MindFlayer(Race):

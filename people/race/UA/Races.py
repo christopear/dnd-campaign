@@ -1,4 +1,6 @@
-from people.Person import *
+from random import choice
+
+from people.race.Race import StandardRace, Race, SimpleRace
 
 
 class Changeling(Race):
