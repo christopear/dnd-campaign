@@ -12,11 +12,11 @@ Manual planning for people is undertaken outside of github; however, the premise
 ##### Structure
 Have settled on an class structure, where each race is a class (as opposed to race being a variable). This choice was made for future proofing purposes: in future, each race will have different random generation requirements (such as name, age, life expectancy, attraction, etc.) which is better dealt with using class inheritance.
 
-Top level classes are abstract classes. Each race inherits from top level Person class, which defines some base characteristics (such as marriage rules).
+Top level classes are abstract classes. Each race inherits from top level Race class, which defines some base characteristics (such as marriage rules).
 
 ##### Races
 
-Name generators have been scraped from [Fantasy Name Generators](http://fantasynamegenerators.com) for each individual class, converted from javascript into pythonand put into a working package structure. They have also been classified into their lore origin (e.g. core 5e, UA, volo, etc.) - development will mainly focus on the Core races but theoretically should scale up easily.
+Name generators have been scraped from [Fantasy Name Generators](http://fantasynamegenerators.com) for each individual class, converted from javascript into pythonand put into a working package structure. They have also been classified into their lore origin (e.g. core 5e, UA, volo, etc.) - development will mainly focus on the Core race but theoretically should scale up easily.
 
 ##### Life expectancy
 

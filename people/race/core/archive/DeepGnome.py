@@ -1,9 +1,9 @@
 from random import choice
 
-from people.Person import Person
+from people.Person import Race
 
 
-class DeepGnome(Person):
+class DeepGnome(Race):
     nm1 = ["b", "br", "d", "dr", "fr", "g", "gh", "gr", "k", "kh", "kr", "sch", "schn", "sn", "sh", "t", "th", "w", "z",
            "zh"]
     nm2 = ["a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e",

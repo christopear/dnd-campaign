@@ -1,4 +1,4 @@
-from people.Person import Person
+from people.Person import Race
 
 
 class Community:
@@ -17,7 +17,7 @@ class Community:
 		return retter
 
 	def add_person(self, person):
-		if type(person) is not Person:
+		if type(person) is not Race:
 			raise TypeError("You must add a person.")
 
 		self.people.append(person)

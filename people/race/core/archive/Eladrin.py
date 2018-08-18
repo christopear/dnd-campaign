@@ -1,9 +1,9 @@
 from random import choice
 
-from people.Person import Person
+from people.Person import Race
 
 
-class Eladrin(Person):
+class Eladrin(Race):
     nm1 = ["Ara", "Aran", "Ber", "Bran", "Cor", "Cru", "Da", "Daye", "Elro", "Ere", "Far", "Fyla", "Gal", "Galin", "Ha",
            "Hor", "Im", "Ira", "Ja", "Jor", "Kru", "Kuo", "Lan", "Lic", "Mar", "Min", "Nal", "Nark", "Ola", "Otir", "Pae",
            "Pan", "Qua", "Quo", "Rel", "Riar", "Sarn", "Sove", "Tav", "Trin", "Uri", "Veth", "Vic", "Wal", "Wrug", "Xan",

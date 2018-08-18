@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 from people.Person import Gender
-from people.races.core.Races import *
+from people.race.core.Races import *
 
 
 class TestPerson(TestCase):

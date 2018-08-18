@@ -1,9 +1,9 @@
 from random import choice
 
-from people.Person import Person
+from people.Person import Race
 
 
-class Drow(Person):
+class Drow(Race):
 	nmF = ["Ahlysaaria", "Akordia", "Alaunirra", "Alystin", "Amalica", "Angaste", "Anluryn", "Ardulace", "Aunrae",
 		   "Balaena", "Baltana", "Bautha", "Belarbreena", "Beszrima", "Brigantyna", "Briza", "Brorna", "Burryna",
 		   "Byrtyn",

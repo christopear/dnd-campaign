@@ -1,11 +1,11 @@
 import abc
 from random import choice
 
-from people.Person import Person
-from people.Person import StandardPerson
+from people.Person import Race
+from people.Person import StandardRace
 
 
-class Dwarf(StandardPerson):
+class Dwarf(StandardRace):
 	nm1 = ["Ad", "Am", "Arm", "Baer", "Daer", "Bal", "Ban", "Bar", "Bel", "Ben", "Ber", "Bhal", "Bhar", "Bhel", "Bram",
 		   "Bran", "Brom", "Brum", "Bun", "Dal", "Dar", "Dol", "Dul", "Eb", "Em", "Erm", "Far", "Gal", "Gar", "Ger",
 		   "Gim",
@@ -38,7 +38,7 @@ class Dwarf(StandardPerson):
 		   "thiel", "tin", "tyn", "va", "van", "via", "vian", "waen", "win", "wyn", "wynn"]
 
 
-class Elf(StandardPerson):
+class Elf(StandardRace):
 	nm1 = ["Ad", "Ae", "Bal", "Bei", "Car", "Cra", "Dae", "Dor", "El", "Ela", "Er", "Far", "Fen", "Gen", "Glyn", "Hei",
 		   "Her", "Ian", "Ili", "Kea", "Kel", "Leo", "Lu", "Mira", "Mor", "Nae", "Nor", "Olo", "Oma", "Pa", "Per",
 		   "Pet",
@@ -63,7 +63,7 @@ class Elf(StandardPerson):
 		   "vyre", "wenys", "wynn", "xina", "xisys", "ynore", "yra", "zana", "zorwyn"]
 
 
-class Halfling(StandardPerson):
+class Halfling(StandardRace):
 	nm1 = ["An", "Ar", "Bar", "Bel", "Con", "Cor", "Dan", "Dav", "El", "Er", "Fal", "Fin", "Flyn", "Gar", "Go", "Hal",
 		   "Hor", "Ido", "Ira", "Jan", "Jo", "Kas", "Kor", "La", "Lin", "Mar", "Mer", "Ne", "Nor", "Ori", "Os", "Pan",
 		   "Per", "Pim", "Quin", "Quo", "Ri", "Ric", "San", "Shar", "Tar", "Te", "Ul", "Uri", "Val", "Vin", "Wen",
@@ -88,7 +88,7 @@ class Halfling(StandardPerson):
 		   "ula", "vira", "vyre", "wyn", "wyse", "yola", "yra", "zana", "zira"]
 
 
-class Halfelf(StandardPerson):
+class Halfelf(StandardRace):
 	nm1 = ["Al", "Aro", "Bar", "Bel", "Cor", "Cra", "Dav", "Dor", "Eir", "El", "Fal", "Fril", "Gaer", "Gra", "Hal",
 		   "Hor",
 		   "Ian", "Ilo", "Jam", "Kev", "Kri", "Leo", "Lor", "Mar", "Mei", "Nil", "Nor", "Ori", "Os", "Pan", "Pet",
@@ -114,7 +114,7 @@ class Halfelf(StandardPerson):
 		   "tihne", "trana", "viel", "vyre", "walyn", "waris", "xaris", "xipha", "yaries", "yra", "zenya", "zira"]
 
 
-class Gnome(StandardPerson):
+class Gnome(StandardRace):
 	nm1 = ["Al", "Ari", "Bil", "Bri", "Cal", "Cor", "Dav", "Dor", "Eni", "Er", "Far", "Fel", "Ga", "Gra", "His", "Hor",
 		   "Ian", "Ipa", "Je", "Jor", "Kas", "Kel", "Lan", "Lo", "Man", "Mer", "Nes", "Ni", "Or", "Oru", "Pana", "Po",
 		   "Qua", "Quo", "Ras", "Ron", "Sa", "Sal", "Sin", "Tan", "To", "Tra", "Um", "Uri", "Val", "Vor", "War", "Wil",
@@ -135,7 +135,7 @@ class Gnome(StandardPerson):
 		   "zyre"]
 
 
-class Dragonborn(Person):
+class Dragonborn(Race):
 	nm1 = ["Ali", "Ar", "Ba", "Bal", "Bel", "Bha", "Bren", "Caer", "Calu", "Dur", "Do", "Dra", "Era", "Faer", "Fro",
 		   "Gre",
 		   "Ghe", "Gora", "He", "Hi", "Ior", "Jin", "Jar", "Kil", "Kriv", "Lor", "Lumi", "Mar", "Mor", "Med", "Nar",
@@ -216,7 +216,7 @@ class Dragonborn(Person):
 		return nSr
 
 
-class HalfOrc(Person):
+class HalfOrc(Race):
 	nm1 = ["Ag", "Agg", "Ar", "Arn", "As", "At", "Atr", "B", "Bar", "Bel", "Bor", "Br", "Brak", "C", "Cr", "D", "Dor",
 		   "Dr",
 		   "Dur", "G", "Gal", "Gan", "Gar", "Gna", "Gor", "Got", "Gr", "Gram", "Grim", "Grom", "Grum", "Gul", "H",
@@ -262,7 +262,7 @@ class HalfOrc(Person):
 		return nMs
 
 
-class Tiefling(Person):
+class Tiefling(Race):
 	nm1 = ["Aet", "Ak", "Am", "Aran", "And", "Ar", "Ark", "Bar", "Car", "Cas", "Dam", "Dhar", "Eb", "Ek", "Er", "Gar",
 		   "Gu",
 		   "Gue", "Hor", "Ia", "Ka", "Kai", "Kar", "Kil", "Kos", "Ky", "Loke", "Mal", "Male", "Mav", "Me", "Mor",
@@ -327,7 +327,7 @@ class Tiefling(Person):
 		return nMs
 
 
-class Human(Person, abc.ABC):
+class Human(Race, abc.ABC):
 	# surname
 	nm21 = ["Axe", "Glow", "Blade", "Blood", "Bone", "Cloud", "Crag", "Crest", "Doom", "Dream", "Coven", "Elf", "Fern",
 			"Feather", "Fire", "Fist", "Flame", "Forest", "Hammer", "Heart", "Hell", "Leaf", "Light", "Moon", "Rage",

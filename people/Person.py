@@ -1,8 +1,7 @@
-import abc
 from enum import Enum
 from random import choice, randint
 
-from tools.DeathAgeCalculator import DeathAgeCalculator
+from people.race.Race import Race
 
 
 class Gender(Enum):
@@ -10,10 +9,7 @@ class Gender(Enum):
 	male = 2
 
 
-class Person(abc.ABC):
-	# todo change this for each race
-	death_age_calculator = DeathAgeCalculator()
-
+class Person:
 	def __init__(self
 				 , first_name=None
 				 , surname=None
@@ -25,6 +21,7 @@ class Person(abc.ABC):
 				 , age=None
 				 , occupation=None
 				 , money=None
+				 , race=None
 				 ):
 		self.occupation = occupation
 		self.money = money
@@ -36,7 +33,7 @@ class Person(abc.ABC):
 		self.mother = mother
 		self.father = father
 		self.children = children
-		self.race = self.__class__.__name__
+		self.race = race
 
 		self.check_gender()
 		self.check_first_name()
@@ -45,6 +42,7 @@ class Person(abc.ABC):
 		self.check_money()
 		self.check_occupation()
 		self.check_age()
+		self.check_race()
 
 	def __str__(self):
 		retter = "Race: " + self.race
@@ -60,21 +58,6 @@ class Person(abc.ABC):
 			self.gender.name
 		)
 		return retter
-
-	# region abstract generators
-	@abc.abstractmethod
-	def generate_surname(self):
-		pass
-
-	@abc.abstractmethod
-	def generate_feminine(self):
-		pass
-
-	@abc.abstractmethod
-	def generate_masculine(self):
-		pass
-
-	# endregion
 
 	# region checker functions
 	def check_gender(self):
@@ -106,6 +89,10 @@ class Person(abc.ABC):
 
 	def check_occupation(self):
 		pass
+
+	def check_race(self):
+		if self.race is None:
+			self.race = choice(Race.HUMANS)
 	# endregion
 
 	# region actual functions
@@ -171,19 +158,3 @@ class Person(abc.ABC):
 
 	# endregion
 
-
-class SimplePerson(Person, abc.ABC):
-	def generate_masculine(self):
-		return choice(self.nm1)
-
-
-class StandardPerson(Person, abc.ABC):
-	def generate_feminine(self):
-		name_component = choice(self.nm3)
-		name_component2 = choice(self.nm4)
-		return name_component + name_component2
-
-	def generate_masculine(self):
-		name_component = choice(self.nm1)
-		name_component2 = choice(self.nm2)
-		return name_component + name_component2

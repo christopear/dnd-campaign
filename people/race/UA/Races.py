@@ -1,7 +1,7 @@
 from people.Person import *
 
 
-class Changeling(Person):
+class Changeling(Race):
 	nm1 = ["", "", "", "b", "d", "f", "h", "j", "l", "m", "n", "p", "r", "s", "t", "v", "w", "y"]
 	nm2 = ["a", "i", "o", "u", "a", "i", "o", "u", "a", "i", "o", "u", "a", "i", "o", "u", "ee", "ie", "ea", "ae", "ai",
 		   "oo", "ou"]
@@ -21,7 +21,7 @@ class Changeling(Person):
 		pass
 
 
-class Genasi(SimplePerson):
+class Genasi(SimpleRace):
 	nm1 = ["Ablaze", "Alight", "Ardor", "Ardour", "Arson", "Ash", "Austral", "Bake", "Beacon", "Blaze", "Blight",
 		   "Boil", "Bonfire", "Brand", "Broil", "Burn", "Calcine", "Candle", "Cauterize", "Char", "Charcoal",
 		   "Cinder",
@@ -72,7 +72,7 @@ class Genasi(SimplePerson):
 		pass
 
 
-class Warforged(SimplePerson):
+class Warforged(SimpleRace):
 	nm1 = ["Abider", "Achiever", "Actor", "Adapter", "Adviser", "Aegis", "Agent", "Animal", "Apparatus", "Armament",
 		   "Artist", "Audience", "Author", "Awakener", "Basher", "Bastion", "Battler", "Bear", "Beast", "Beauty",
 		   "Beetle",
@@ -114,7 +114,7 @@ class Warforged(SimplePerson):
 		pass
 
 
-class Shifter(SimplePerson):
+class Shifter(SimpleRace):
 	nm1 = ["Acor", "Almond", "Ash", "Astro", "Badger", "Barb", "Basalt", "Basil", "Beast", "Birch", "Blast", "Blaze",
 		   "Bluff", "Bog", "Boulder", "Bramble", "Breach", "Briar", "Brock", "Brook", "Burst", "Canyon", "Char",
 		   "Chasm",
@@ -145,7 +145,7 @@ class Shifter(SimplePerson):
 		pass
 
 
-class Gith(StandardPerson):
+class Gith(StandardRace):
 	nm1 = ["Am", "Ar", "Ara", "Aza", "Bar", "Bra", "Bru", "Da", "Dar", "Dor", "Dra", "Dro", "Du", "Fa", "Far", "Fer",
 		   "Gra",
 		   "Gran", "Gre", "Gro", "Gru", "Hu", "Ka", "Kar", "Kha", "Kra", "Kro", "Ma", "Mu", "Na", "Nar", "Nu", "Ra",
@@ -165,7 +165,7 @@ class Gith(StandardPerson):
 		pass
 
 
-class Minotaur(Person):
+class Minotaur(Race):
 	nmFF = ["Aam", "Ane", "Are", "Ase", "Duu", "Em", "Enti", "Este", "Fen", "Hene", "Hes", "Hila", "Hine", "Ias", "Ire",
 			"Ki", "Kia", "Kuo", "Laan", "Line", "Loo", "Muu", "Nan", "Nea", "Neo", "Noo", "Nuo", "Oen", "Oes", "Raas",
 			"Ras", "Sees", "Seo", "Sina", "Tee", "Tes", "Tia", "Tina", "Uova", "Weo"]

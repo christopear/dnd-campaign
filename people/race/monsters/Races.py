@@ -1,7 +1,7 @@
 from people.Person import *
 
 
-class MindFlayer(Person):
+class MindFlayer(Race):
 	nm1 = ["", "", "", "c", "d", "dr", "g", "gr", "k", "l", "q", "qh", "r", "s", "sr", "sv", "sl", "t", "th", "tr", "v",
 		   "z"]
 	nm2 = ["a", "e", "u", "a", "e", "u", "a", "e", "u", "a", "e", "u", "a", "e", "u", "a", "e", "u", "a", "e", "u", "a",
@@ -56,7 +56,7 @@ class MindFlayer(Person):
 		pass
 
 
-class Beholder(Person):
+class Beholder(Race):
 	nm1 = ["", "", "", "", "", "b", "c", "ch", "d", "dh", "f", "g", "gh", "j", "kh", "l", "m", "n", "q", "qh", "r", "s",
 		   "th", "v", "x", "z"]
 	nm2 = ["a", "e", "i", "o", "a", "e", "i", "o", "a", "e", "i", "o", "a", "e", "i", "o", "a", "e", "i", "o", "a", "e",
@@ -116,7 +116,7 @@ class Beholder(Person):
 		pass
 
 
-class Gnoll(Person):
+class Gnoll(Race):
 	nm1 = ["a", "e", "i", "o", "u"]
 	nm2 = ["b", "br", "d", "dr", "dn", "gn", "gr", "l", "ld", "lg", "lb", "lt", "lth", "mm", "mn", "md", "nd", "nr",
 		   "r",
@@ -172,7 +172,7 @@ class Gnoll(Person):
 		pass
 
 
-class Hag(Person):
+class Hag(Race):
 	nm1 = ["Acrid", "Ancient", "Angry", "Antique", "Antsy", "Arrogant", "Auntie", "Babbling", "Baggy", "Batty", "Bawdy",
 		   "Bickering", "Biting", "Bitter", "Bizarre", "Black", "Blaring", "Blathering", "Bony", "Bumbling", "Bumpy",
 		   "Cackling", "Cheeky", "Chittering", "Chuckling", "Cold", "Cooking", "Coughing", "Crabby", "Crackling",
@@ -291,7 +291,7 @@ class Hag(Person):
 		pass
 
 
-class Kobolds(Person):
+class Kobolds(Race):
 	nm1 = ["", "", "", "", "d", "g", "h", "k", "m", "n", "r", "s", "sn", "t", "v", "z"]
 	nm2 = ["a", "e", "i", "o", "u"]
 	nm3 = ["b", "bl", "d", "dr", "g", "gg", "gl", "gn", "gr", "hz", "hr", "hl", "hs", "k", "kk", "kr", "kl", "kb", "kd",
@@ -324,7 +324,7 @@ class Kobolds(Person):
 		pass
 
 
-class Orcs(Person):
+class Orcs(Race):
 	nm1 = ["", "", "", "b", "bh", "br", "d", "dh", "dr", "g", "gh", "gr", "j", "l", "m", "n", "r", "rh", "sh", "z",
 		   "zh"]
 	nm2 = ["a", "o", "u"]
@@ -422,7 +422,7 @@ class Orcs(Person):
 		pass
 
 
-class YuanTi(Person):
+class YuanTi(Race):
 	def race_check(self):
 		pass
 

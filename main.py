@@ -1,5 +1,5 @@
 from people.Person import Gender
-from people.races.Races import HUMANS
+from people.race.Race import HUMANS
 
 # p = [choice(HUMANS)() for i in range(0, 1000)]
 #

@@ -1,7 +1,7 @@
 from people.Person import *
 
 
-class Lizardfolk(Person):
+class Lizardfolk(Race):
 	nm1 = ["", "", "", "", "", "b", "d", "g", "jh", "k", "l", "m", "n", "r", "s", "sh", "t", "tr", "th", "thr", "v"]
 	nm2 = ["a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e",
 		   "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o",
@@ -49,7 +49,7 @@ class Lizardfolk(Person):
 		pass
 
 
-class Kenku(SimplePerson):
+class Kenku(SimpleRace):
 	nm1 = ["Angler", "Baker", "Barker", "Basher", "Bather", "Beggar", "Biter", "Boiler", "Bomber", "Bonker", "Bouncer",
 		   "Braker", "Brander", "Breaker", "Broiler", "Bruiser", "Bubbler", "Burner", "Butcher", "Buzzer", "Cackler",
 		   "Carver", "Caster", "Chimer", "Chitter", "Chomper", "Chopper", "Clamor", "Clamper", "Clanger", "Clapper",
@@ -129,7 +129,7 @@ class Kenku(SimplePerson):
 		pass
 
 
-class Triton(Person):
+class Triton(Race):
 	nm1 = ["c", "d", "dh", "j", "jh", "k", "kh", "m", "n", "r", "v", "z"]
 	nm2 = ["a", "e", "i", "o", "u"]
 	nm3 = ["d", "dd", "g", "gl", "hn", "hl", "hr", "l", "lg", "lm", "ld", "ln", "lz", "m", "mn", "mr", "n", "nn", "nd",
@@ -187,7 +187,7 @@ class Triton(Person):
 		pass
 
 
-class Tabaxi(Person):
+class Tabaxi(Race):
 	nm1 = ["Afternoon Nap (Nap)", "Animal in the Woods (Woods)", "Answered Riddle (Riddle)", "Art of Shadows (Art)",
 		   "Aura of Passion (Aura)", "Aurora of Winter (Aurora)", "Autumn Harvest (Autumn)", "Beats of a Heart (Beats)",
 		   "Beauty of Summer (Summer)", "Beauty's Eye (Beauty)", "Belly of a Beast (Beast)", "Berry Bush (Bush)",
@@ -343,7 +343,7 @@ class Tabaxi(Person):
 		pass
 
 
-class Goliath(Person):
+class Goliath(Race):
 	nmFF = ["Age", "Ane", "Gau", "Ge", "Ina", "Kau", "Ke", "Ki", "Kuo", "La", "Le", "Maa", "Man", "Mau", "Me", "Na",
 			"Nal",
 			"Ni", "One", "Ori", "Paa", "Pau", "Pe", "Tha", "The", "Thu", "Vaa", "Vau", "Ve", "Vu"]
@@ -402,7 +402,7 @@ class Goliath(Person):
 		pass
 
 
-class Aasimar(Person):
+class Aasimar(Race):
 	nm1 = ["", "", "", "", "b", "br", "c", "cr", "h", "l", "m", "n", "p", "r", "t", "v", "w", "z"]
 	nm2 = ["a", "e", "i", "o", "u", "y", "a", "e", "i", "o", "u", "y", "a", "e", "i", "o", "u", "y", "au", "ai", "ea",
 		   "ei"]
@@ -476,7 +476,7 @@ class Aasimar(Person):
 		pass
 
 
-class Aarakocra(Person):
+class Aarakocra(Race):
 	nm1 = ["", "", "", "", "", "c", "cl", "cr", "d", "g", "gr", "h", "k", "kh", "kl", "kr", "q", "qh", "ql", "qr", "r",
 		   "rh", "s", "y", "z"]
 	nm2 = ["a", "e", "i", "u", "a", "e", "i", "u", "a", "e", "i", "u", "a", "e", "i", "u", "a", "e", "i", "u", "a", "e",
