@@ -85,6 +85,23 @@ class Halfling(StandardRace):
 		   "trix",
 		   "ula", "vira", "vyre", "wyn", "wyse", "yola", "yra", "zana", "zira"]
 
+	nm5 = ["Bag", "Bank", "Bann", "Bean", "Boff", "Bolge", "Brace", "Brandy", "Brock", "Bulge", "Bunce", "Burrow",
+		   "Button", "Chet", "Chubb", "Clay", "Clip", "Clod", "Dig", "Digger", "Diggle", "Dug", "Dugs", "Fair", "Far",
+		   "Fare", "Gam", "Gard", "Gauk", "Gold", "Good", "Goold", "Green", "Grubb", "Hay", "Head", "Heap", "Hog",
+		   "Horn", "Lee", "Light", "Loam", "Long", "Mag", "Math", "Mathom", "Mug", "New", "Noak", "Noakes", "Oak",
+		   "Old", "Pipe", "Pod", "Proud", "Puddi", "Root", "Roper", "Rum", "Rumble", "Sack", "Sand", "Small", "Smial",
+		   "Smoke", "Tea", "Took", "Tunnelly", "Two", "Under", "Weed", "Whim", "Whit"]
+	nm6 = ["bairn", "blower", "body", "brace", "brook", "buck", "burrow", "button", "es", "field", "fin", "foot",
+		   "furrow", "garden", "gee", "ger", "gin", "gins", "girdle", "got", "hair", "hand", "head", "heaver", "hedge",
+		   "hill", "hole", "home", "house", "iffer", "ins", "kin", "lock", "man", "mathom", "ner", "nose", "pen",
+		   "pipe", "rogers", "smial", "smoke", "strong", "tea", "tunnel", "umble", "ville", "ward", "weed", "wort",
+		   "worthy"]
+
+	def generate_surname(self):
+		name_component = choice(self.nm5)
+		name_component2 = choice(self.nm6)
+		return (name_component + name_component2).title()
+
 
 class Halfelf(StandardRace):
 	nm1 = ["Al", "Aro", "Bar", "Bel", "Cor", "Cra", "Dav", "Dor", "Eir", "El", "Fal", "Fril", "Gaer", "Gra", "Hal",
