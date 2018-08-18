@@ -1,9 +1,15 @@
 from unittest import TestCase
 
-from people.Person import *
+from people.Person import Person, Gender
+from people.race.core.Races import Chondathan
 
 
 class TestPerson(TestCase):
+	def test_race(self):
+		p1 = Person(race=Chondathan())
+		self.assertIsInstance(p1.race, Chondathan)
+		self.assertEqual(str(p1.race), "Chondathan")
+
 	def test_gender(self):
 		p1 = Person(gender=Gender.male)
 		self.assertEqual(p1.gender, Gender.male)
