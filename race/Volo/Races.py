@@ -1,6 +1,6 @@
 from random import choice
 
-from people.race.Race import Race, SimpleRace
+from race.Race import Race, SimpleRace
 
 
 class Lizardfolk(Race):

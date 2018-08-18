@@ -42,7 +42,6 @@ class Person:
 		self.check_occupation()
 		self.check_age()
 
-
 	def __str__(self):
 		retter = "Race: " + self.race
 		retter += ", Name: " + self.first_name + " " + self.surname
@@ -86,6 +85,7 @@ class Person:
 
 	def check_race(self):
 		pass
+
 	# endregion
 
 	# region actual functions
@@ -150,4 +150,3 @@ class Person:
 		return child
 
 	# endregion
-
