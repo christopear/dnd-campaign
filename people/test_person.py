@@ -161,3 +161,22 @@ class TestPerson(TestCase):
 		self.assertTrue(p3.has_father())
 		self.assertTrue(p3.has_mother())
 		self.assertTrue(p3.has_both_parents())
+
+	def test_siblings(self):
+		p1 = Person(gender=Gender.male)
+		p2 = Person(gender=Gender.female)
+
+		p1.marry(p2)
+
+		c1 = p1.create_child()
+		c2 = p1.create_child()
+		c3 = p1.create_child()
+
+		self.assertIn(c1, c2.get_siblings())
+		self.assertIn(c1, c3.get_siblings())
+		self.assertNotIn(c1, c1.get_siblings())
+
+		self.assertEqual(c1.father, c2.father, c3.father)
+
+		self.assertIn(c1, c2.father.children)
+		self.assertIn(c1, c3.mother.children)
