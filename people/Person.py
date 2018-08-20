@@ -153,4 +153,18 @@ class Person:
 
 		return child
 
+	def get_siblings(self):
+		siblings = []
+
+		if self.father is not None:
+			father_children = self.father.children
+
+		if self.mother is not None:
+			mother_children = self.mother.children
+
+		for child in father_children:
+			if child is not self and child in mother_children:
+				siblings.append(child)
+
+		return siblings
 	# endregion
