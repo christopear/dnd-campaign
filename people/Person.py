@@ -153,18 +153,107 @@ class Person:
 
 		return child
 
+	# endregion
+	# region relationship getters
+	def get_children(self):
+		return self.children
+
 	def get_siblings(self):
 		siblings = []
 
 		if self.father is not None:
-			father_children = self.father.children
+			father_children = self.father.get_children()
 
 		if self.mother is not None:
-			mother_children = self.mother.children
+			mother_children = self.mother.get_children()
 
 		for child in father_children:
 			if child is not self and child in mother_children:
 				siblings.append(child)
 
 		return siblings
+
+	def get_parents(self):
+		parents = []
+
+		if self.father is not None:
+			parents.append(self.father)
+
+		if self.mother is not None:
+			parents.append(self.mother)
+
+		return parents
+
+	def get_uncles_and_aunts(self):
+		uncles_and_aunts = []
+
+		parents = self.get_parents()
+
+		for parent in parents:
+			for sibling in parent.get_siblings():
+				if sibling not in uncles_and_aunts:
+					uncles_and_aunts.append(sibling)
+
+		return uncles_and_aunts
+
+	def get_cousins(self):
+		cousins = []
+
+		uncles_and_aunts = self.get_uncles_and_aunts()
+
+		for uncle_or_aunt in uncles_and_aunts:
+			for child in uncle_or_aunt.get_children():
+				if child not in cousins:
+					cousins.append(child)
+
+		return cousins
+
+	def get_nephews_and_nieces(self):
+		nephews_and_nieces = []
+		siblings = self.get_siblings()
+
+		for sibling in siblings:
+			for child in sibling.get_children():
+				if child not in nephews_and_nieces:
+					nephews_and_nieces.append(child)
+
+		return nephews_and_nieces
+
+	def get_grandparents(self):
+		grandparents = []
+
+		for parent in self.get_parents():
+			for gp in parent.get_parents():
+				grandparents.append(gp)
+
+		return grandparents
+
+	def get_all_family(self):
+		family = []
+
+		for p in self.get_children():
+			if p not in family:
+				family.append(p)
+
+		for p in self.get_parents():
+			if p not in family:
+				family.append(p)
+
+		for p in self.get_uncles_and_aunts():
+			if p not in family:
+				family.append(p)
+
+		for p in self.get_cousins():
+			if p not in family:
+				family.append(p)
+
+		for p in self.get_nephews_and_nieces():
+			if p not in family:
+				family.append(p)
+
+		for p in self.get_grandparents():
+			if p not in family:
+				family.append(p)
+
+		return family
 	# endregion
