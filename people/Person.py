@@ -161,6 +161,8 @@ class Person:
 	def get_siblings(self):
 		siblings = []
 
+		father_children = []
+		mother_children = []
 		if self.father is not None:
 			father_children = self.father.get_children()
 
