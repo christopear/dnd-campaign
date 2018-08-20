@@ -8,6 +8,8 @@ class Gender(Enum):
 
 
 class Person:
+	PEOPLE = []
+
 	def __init__(self
 				 , first_name=None
 				 , surname=None
@@ -21,6 +23,8 @@ class Person:
 				 , money=None
 				 , race=None
 				 ):
+		Person.PEOPLE.append(self)
+
 		self.occupation = occupation
 		self.money = money
 		self.partner = partner
