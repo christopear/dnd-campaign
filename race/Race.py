@@ -1,6 +1,9 @@
 import abc
 from random import choice
 
+from people.Gender import Gender
+
+
 class Race(abc.ABC):
 	# todo change this for each race
 	# death_age_calculator = DeathAgeCalculator()
@@ -20,6 +23,14 @@ class Race(abc.ABC):
 	@abc.abstractmethod
 	def generate_masculine(self):
 		pass
+
+	def generate_first_name(self, gender):
+		if gender == Gender.female:
+			return self.generate_feminine()
+		elif gender == Gender.male:
+			return self.generate_masculine()
+		else:
+			raise NotImplementedError("You have not provided a gender.")
 
 	# endregion
 
