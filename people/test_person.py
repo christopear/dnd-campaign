@@ -1,6 +1,7 @@
 from unittest import TestCase
 
-from people.Person import Person, Gender
+from people.Gender import Gender
+from people.Person import Person
 from race.core.Races import Chondathan
 
 

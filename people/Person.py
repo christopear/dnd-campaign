@@ -1,10 +1,7 @@
-from enum import Enum
 from random import choice, randint
 
-
-class Gender(Enum):
-	female = 1
-	male = 2
+from people.Gender import Gender
+from race.core.Races import Chondathan
 
 
 class Person:
@@ -27,24 +24,29 @@ class Person:
 
 		self.occupation = occupation
 		self.money = money
-		self.partner = partner
 		self.surname = surname
 		self.first_name = first_name
 		self.age = age
 		self.gender = gender
-		self.mother = mother
-		self.father = father
 		self.children = children
 		self.race = race
 
-		self.check_race()
-		self.check_gender()
-		# self.check_first_name()
-		# self.check_surname()
-		self.check_children()
-		self.check_money()
+		# people
+		self.partner = partner
+		self.mother = mother
+		self.father = father
+
+		# checkers
 		self.check_occupation()
+		self.check_money()
 		self.check_age()
+		self.check_gender()
+		self.check_children()
+		self.check_race()
+
+		# name checks
+		self.check_surname()
+		self.check_first_name()
 
 	def __str__(self):
 		retter = "Race: " + self.race
@@ -71,10 +73,12 @@ class Person:
 			self.age = randint(0, 122)
 
 	def check_first_name(self):
-		pass
+		if self.race is not None and self.surname is None:
+			self.surname = self.race.generate_first_name(self.gender)
 
 	def check_surname(self):
-		pass
+		if self.race is not None and self.surname is None:
+			self.surname = self.race.generate_surname()
 
 	def check_children(self):
 		if self.children is None:
@@ -88,8 +92,17 @@ class Person:
 		pass
 
 	def check_race(self):
-		pass
+		if self.race is None:
+			self.race = Chondathan()
 
+	# def check_father(self):
+	# 	pass
+	#
+	# def check_mother(self):
+	# 	pass
+	#
+	# def check_partner(self):
+	# 	pass
 	# endregion
 
 	# region actual functions
@@ -258,4 +271,5 @@ class Person:
 				family.append(p)
 
 		return family
+
 	# endregion
