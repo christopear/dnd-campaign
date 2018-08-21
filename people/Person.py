@@ -123,7 +123,7 @@ class Person:
 			child = child_class(father=self, mother=self.relationships.get_spouse(), age=0)
 
 		self.relationships.add_child(child)
-		self.relationships.get_spouse().add_child(child)
+		self.relationships.get_spouse().relationships.add_child(child)
 
 		return child
 
