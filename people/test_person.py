@@ -39,8 +39,8 @@ class TestPerson(TestCase):
 
 		p1.marry(p2)
 
-		self.assertEqual(p1.partner, p2)
-		self.assertEqual(p2.partner, p1)
+		self.assertEqual(p2, p1.relationships.get_spouse())
+		self.assertEqual(p1, p2.relationships.get_spouse())
 
 		# gay
 		p1 = Person(gender=Gender.male)
@@ -48,8 +48,8 @@ class TestPerson(TestCase):
 
 		p1.marry(p2)
 
-		self.assertEqual(p1.partner, p2)
-		self.assertEqual(p2.partner, p1)
+		self.assertEqual(p2, p1.relationships.get_spouse())
+		self.assertEqual(p1, p2.relationships.get_spouse())
 
 		# gay 2
 		p1 = Person(gender=Gender.female)
@@ -57,8 +57,8 @@ class TestPerson(TestCase):
 
 		p1.marry(p2)
 
-		self.assertEqual(p1.partner, p2)
-		self.assertEqual(p2.partner, p1)
+		self.assertEqual(p2, p1.relationships.get_spouse())
+		self.assertEqual(p1, p2.relationships.get_spouse())
 
 	def test_can_have_children(self):
 		# male
